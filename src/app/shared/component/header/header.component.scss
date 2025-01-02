@@ -1,0 +1,116 @@
+@import '../../../../variables';
+
+section{
+    padding: 0 5%;
+    background-color: transparent;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    font-size: 18px;
+    gap: 40px;
+
+    @include center-flex;
+    justify-content:space-between;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 40px
+}
+
+.header-link {
+    position: relative;
+    color: $text-color; 
+
+    &::after {
+        content: ''; 
+        position: absolute; 
+        bottom: -8px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 8px; 
+        height: 8px; 
+        border-radius: 50%; 
+        background-color: $primary-color-light; 
+        opacity: 0; 
+        transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1; 
+    }
+}
+
+.header-icon {
+
+
+    >img{
+        width: 72px;
+    }
+
+}
+
+.header-container{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.731), rgba(61, 207, 183, 0.023)); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.057);
+    
+}
+
+.logo-container{
+        @include center-flex;
+}
+
+.logo-icon {
+    font-size: 28px; 
+    font-weight: bold; 
+    color: $primary-color-light; 
+    text-transform: uppercase;
+    letter-spacing: -4px; 
+    margin: 0 6px; 
+    display: inline-block;
+    transform: rotate(-20deg);
+    transition: transform 0.3s; 
+    background-color: rgba(61, 207, 182, 0.2);
+    padding: 8px 16px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    &:hover{
+        transform: rotate(0deg);
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+         &::before {
+             content: '<>';
+             margin-right: 5px;
+             font-weight: 200;
+         }
+    
+         /*
+            &::after {
+                content: '';
+                margin-left: 5px; 
+                font-weight: 200;
+            }
+        */
+    
+}
+
+.header-name {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start; 
+
+    .first-name,
+    .last-name {
+        font-weight: bold;
+        font-size: 24px; 
+        color: $text-color; 
+        text-align: center;
+        margin: 0;
+    }
+}
