@@ -85,18 +85,18 @@ section{
     }
 
          &::before {
-             content: '<>';
+             content: '<';
              margin-right: 5px;
              font-weight: 200;
          }
     
-         /*
+         
             &::after {
-                content: '';
+                content: '>';
                 margin-left: 5px; 
                 font-weight: 200;
             }
-        */
+        
     
 }
 
