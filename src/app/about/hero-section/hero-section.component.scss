@@ -85,7 +85,7 @@ section{
 .marquee-content {
     display: flex;
     white-space: nowrap;
-    animation: marquee 10s linear infinite;
+    animation: marquee 15s linear infinite;
 
     >span {
         color: $primary-color-light;
@@ -106,7 +106,7 @@ section{
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-30%);
     }
 }
 
@@ -147,4 +147,76 @@ section{
   50% {
     transform: translateY(10px); 
   }
+}
+
+aside{
+    position: absolute;
+    right: 0px;
+    bottom: 244px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+address{
+    font-family: "karla";
+    font-size: 20px;
+    font-weight: 300;
+    transform: rotate(-90deg);
+    margin-bottom: 120px;
+    margin-right: 10px;
+    &:hover {
+            color: $primary-color-light;
+            transition: 0.3s ease-in-out;
+        }
+    
+}
+
+.svg-github,
+.svg-linkedin {
+    transition: fill 0.3s ease-in-out;
+
+    &:hover {
+        path {
+            fill: $text-color;
+            cursor: pointer;
+            transition: fill 0.3s ease-in-out;
+        }
+    }
+}
+
+.point {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $primary-color-light;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.svg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.svg-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .point {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $primary-color-light;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover .point {
+        opacity: 1;
+    }
 }

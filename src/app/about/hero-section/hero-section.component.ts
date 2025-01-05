@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrl: './hero-section.component.scss',
 })
 export class HeroSectionComponent {
-
+  email: string = 'martinjaros88@gmail.com';
 }
