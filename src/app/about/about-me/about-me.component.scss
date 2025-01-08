@@ -1,0 +1,95 @@
+@import '../../../../src/variables';
+
+section {
+    padding: 0 5%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    background-color: $background-color;
+    position: relative;
+    font-family: "karla";
+}
+
+.profile-image-container {
+    position: relative;
+    margin-top: 5%;
+
+    .cover-image {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 40vw;
+        height: auto;
+        max-width: 480px;
+        max-height: 480px;
+    }
+
+    .profil {
+        position: relative;
+        width: 40vw;
+        height: auto;
+        max-width: 480px;
+        max-height: 480px;
+    }
+}
+
+.about-me-content {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    max-width: 480px;
+    max-height: 480px;
+    margin-bottom: 10%;
+
+    >h3 {
+        color: $primary-color-light;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+}
+
+.about-me-header {
+    border: 1px solid $primary-color-light;
+    padding: 24px;
+    border-radius: 32px;
+    background-color: $frame-background-secondary;
+
+    >h2 {
+        font-size: 48px;
+        color: $primary-color-light;
+        margin-bottom: 24px;
+    }
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+
+    >span {
+        display: flex;
+        align-items: start;
+        color: #BCBEBE;
+
+        &:hover {
+            color: $text-color;
+        }
+    }
+
+    >img {
+        width: 24px;
+        height: 24px;
+        margin-right: 24px;
+    }
+
+    >span:last-child {
+        margin-bottom: 0;
+    }
+}
