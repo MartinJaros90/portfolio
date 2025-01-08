@@ -50,20 +50,24 @@ section{
             padding: 16px 24px;
             border-radius: 32px;
             position: relative; 
-
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            &:hover {
+                    transform: scale(1.05); 
+                    background-color: rgba(61, 207, 182, 0.2);
+                }
             span {
-                display: inline-block; 
-                transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out; 
+            display: inline-block;
+            transition: color 0.3s ease; 
 
                 &:hover {
-                    transform: translateX(-100%);
-                    opacity: 0;
-                    color: $primary-color-light;
+    
+                        color: $primary-color-light; 
+                    }
                 }
             }
         }
     }
-}
+
 
 .hidden {
     display: none;

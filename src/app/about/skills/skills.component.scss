@@ -1,0 +1,146 @@
+@import '../../../../src/variables';
+section{
+    padding: 0 5%;
+    background-image: url(../../../assets/img/img-bg.png);
+    background-color: $primary-color-dark;
+    height: 100vh;
+    width: 100%;
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: "karla";
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}
+
+.skills-container{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 1920px;
+}
+
+.skill-set-content {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+    max-height: 560px;
+
+
+    >h3 {
+        color: $primary-color-light;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+}
+
+.skill-set-header {
+    border: 1px solid $primary-color-light;
+    padding: 24px;
+    border-radius: 32px;
+    background-color: $frame-background-secondary;
+    margin-bottom: 24px;
+
+    >h2 {
+        font-size: 48px;
+        color: $primary-color-light;
+        margin-bottom: 24px;
+    }
+}
+
+.description,
+.info-section{
+    margin-bottom: 16px;
+}
+
+.info-section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.another-skill {
+    font-size: 32px;
+    font-weight: 600;
+
+    >span {
+        color: $primary-color-light;
+    }
+}
+
+.last{
+    >span{
+    margin-bottom: 24px;
+    }
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+
+
+    >a {
+        border: 1px solid #ffffff;
+        padding: 16px 24px;
+        border-radius: 32px;
+        position: relative;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: rgba(61, 207, 182, 0.2);
+        }
+
+        span {
+            display: inline-block;
+            transition: color 0.3s ease;
+
+            &:hover {
+
+                color: $primary-color-light;
+            }
+        }
+    }
+}
+
+.right{
+    width: 40vw;
+        height: auto;
+        max-width: 560px;
+        max-height: 560px;
+
+        display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 16px; 
+        
+            >span:nth-child(n+9) {
+                grid-column: span 1; 
+            }
+        
+            >span:nth-child(9),
+            >span:nth-child(10),
+            >span:nth-child(11) {
+                grid-column: span 1;
+            }
+
+    >span{
+        margin: 24px;
+        text-align: center;
+
+        >img{
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

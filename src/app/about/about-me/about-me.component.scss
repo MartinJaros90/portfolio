@@ -77,9 +77,11 @@ section {
         display: flex;
         align-items: start;
         color: #BCBEBE;
+        transition: color 0.3s ease, transform 0.3s ease;
 
         &:hover {
             color: $text-color;
+            transform: scale(1.05);
         }
     }
 
