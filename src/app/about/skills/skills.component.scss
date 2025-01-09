@@ -12,17 +12,23 @@ section{
     position: relative;
     font-family: "karla";
     display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
         
 }
 
-.skills-container{
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
+.content-wrapper {
     max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .skill-set-content {
@@ -141,6 +147,41 @@ section{
         >img{
             width: 64px;
             height: 64px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            &:hover{
+                transform: scale(1.07);
+            }
         }
     }
+}
+
+.mindset-container {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+
+    &:hover {
+            color: $primary-color-light;
+        }
+
+    .mindset-frame {
+        opacity: 0;
+        position: absolute; 
+        top: -90px;
+        left: -3px;
+        transition: all 0.3s ease-in-out;
+        visibility: hidden; 
+        transform: scale(0.95); 
+    }
+
+        &:hover .mindset-frame {
+            visibility: visible; 
+            opacity: 1;
+            transform: scale(1.07);
+        }
+}
+
+.mindset-container .mindset-frame{
+    width: 160px !important;
+    height: auto !important;
 }

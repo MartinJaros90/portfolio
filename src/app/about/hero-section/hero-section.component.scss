@@ -21,6 +21,16 @@ section{
     }
 }
 
+.content-wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero{
 
     >h2{
@@ -75,7 +85,8 @@ section{
 
 .marquee-container {
     height: 56px;
-    width: 100vw;
+    width: 100%;
+    max-width: 1920px; 
     position: absolute;
     bottom: 72px;
     left: 50%;
@@ -84,6 +95,7 @@ section{
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .marquee-content {

@@ -1,14 +1,21 @@
 @import '../../../../src/variables';
 
 section {
-    padding: 0 5%;
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-between; 
     background-color: $background-color;
     position: relative;
     font-family: "karla";
+}
+
+.content-wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
 .profile-image-container {
@@ -35,16 +42,14 @@ section {
 }
 
 .about-me-content {
-    width: 40vw;
+width: 40vw;
     height: auto;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    right: 5%;
     max-width: 480px;
     max-height: 480px;
     margin-bottom: 10%;
+    align-self: flex-end; // Neue Zeile
 
     >h3 {
         color: $primary-color-light;
