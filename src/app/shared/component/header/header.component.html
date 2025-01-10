@@ -1,8 +1,13 @@
 <section class="header-container">
   <div class="content-wrapper">
     <div class="header-links">
-      <div class="header-icon">
-        <img src="../../../../assets/icons/de-active.png" alt="" />
+      <div class="language-switcher" (click)="toggleLanguage()">
+        <img
+          class="language-switcher__icon"
+          [class.language-switcher__icon--animating]="isAnimating"
+          [src]="currentLanguageIcon"
+          [alt]="isGerman ? 'Deutsch' : 'English'"
+        />
       </div>
       <a class="header-link" href="">About me</a>
       <a class="header-link" href="">Skills</a>

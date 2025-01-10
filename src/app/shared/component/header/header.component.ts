@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  isGerman = true;
+  isAnimating = false;
+  currentLanguageIcon = '../../../../assets/icons/de-active.png';
+
+  toggleLanguage() {
+    this.isAnimating = true;
+
+    setTimeout(() => {
+      this.isGerman = !this.isGerman;
+      this.currentLanguageIcon = this.isGerman
+        ? '../../../../assets/icons/de-active.png'
+        : '../../../../assets/icons/en-active.png';
+    }, 200);
+
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 400);
+  }
+}
