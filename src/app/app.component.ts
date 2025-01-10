@@ -5,6 +5,7 @@ import { HeaderComponent } from './shared/component/header/header.component';
 import { HeroSectionComponent } from './about/hero-section/hero-section.component';
 import { AboutMeComponent } from './about/about-me/about-me.component';
 import { SkillsComponent } from './about/skills/skills.component';
+import { PortfolioShowcaseComponent } from './portfolio-showcase/portfolio-showcase.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { SkillsComponent } from './about/skills/skills.component';
     HeroSectionComponent,
     AboutMeComponent,
     SkillsComponent,
+    PortfolioShowcaseComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

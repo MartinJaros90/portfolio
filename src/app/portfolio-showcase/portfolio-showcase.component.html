@@ -1,1 +1,66 @@
-<p>portfolio-showcase works!</p>
+<section>
+  <div class="portfolio-wrapper">
+    <div class="featured-projects-container">
+      <h3>Portfolio</h3>
+      <h2>Featured Projects</h2>
+      <span>
+        Explore a selection of my work here - Interact with <br />
+        projects to see my skills in action.
+      </span>
+    </div>
+
+    <div class="portfolio-menu">
+      <div
+        class="portfolio-menu-item"
+        data-project="pokedex"
+        (click)="openDialog('pokedex')"
+      >
+        <span>Pokédex</span>
+        <div class="portfolio-menu-item-tech">
+          <span class="separator">HTML </span
+          ><span class="separator">CSS</span>
+          <span class="separator">Firebase</span
+          ><span class="separator">JavaScript</span>
+        </div>
+      </div>
+
+      <div
+        class="portfolio-menu-item"
+        data-project="sharkie"
+        (click)="openDialog('sharkie')"
+      >
+        <span>Sharkie</span>
+        <div class="portfolio-menu-item-tech">
+          <span class="separator">HTML </span><span class="separator">CSS</span
+          ><span class="separator">JavaScript</span>
+        </div>
+      </div>
+
+      <div
+        class="portfolio-menu-item last"
+        data-project="join"
+        (click)="openDialog('join')"
+      >
+        <span>Join</span>
+        <div class="portfolio-menu-item-tech">
+          <span class="separator">HTML </span><span class="separator">CSS</span>
+          <span class="separator">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="project-dialog"
+    [class.show]="selectedProject"
+    (click)="closeDialog()"
+  >
+    <div class="dialog-content" (click)="$event.stopPropagation()">
+      <span class="close-button" (click)="closeDialog()">&times;</span>
+      <div class="dialog-body" *ngIf="selectedProject">
+        <h2>{{ selectedProject }}</h2>
+        <!-- weitere Projektdetails -->
+      </div>
+    </div>
+  </div>
+</section>
