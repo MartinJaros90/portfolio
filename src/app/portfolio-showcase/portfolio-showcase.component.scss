@@ -36,6 +36,7 @@ section {
         font-weight: 700;
         color: $primary-color-light;
         margin-bottom: 24px;
+        font-family: "Fira Code";
 
     }
 }
@@ -194,7 +195,8 @@ section {
         cursor: pointer;
         color: $primary-color-light;
         transition: color 0.2s ease;
-        z-index: 2;
+        z-index: 1001; 
+        padding: 8px; 
 
         &:hover {
             color: darken($primary-color-light, 10%);
@@ -226,4 +228,180 @@ section {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+//DIALOG CONTENT
+
+.dialog-body {
+    display: flex;
+    gap: 48px;
+    padding: 24px;
+    font-family: 'Fira Code';
+
+    .dialog-left {
+        flex: 1;
+        max-width: 50%;
+
+        .project-number {
+            font-size: 80px;
+            font-weight: 700;
+            color: $primary-color-light;
+            margin-bottom: 16px;
+            font-family: 'Karla';
+        }
+
+        h2 {
+            font-size: 56px;
+            margin-bottom: 32px;
+            color: $text-color;
+        }
+
+        .project-description {
+            margin-bottom: 64px;
+
+            h3 {
+                color: $primary-color-light;
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+
+            p {
+
+                font-family: 'Karla';
+                font-size: 20px;
+            }
+        }
+
+    .tech-stack {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 48px;
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            .tech-name {
+                min-width: 100px;
+                font-family: 'Fira Code';
+            }
+
+            .tech-bar {
+                height: 1px;
+                flex-grow: 1;
+                background-color: $primary-color-light;
+                opacity: 0.3;
+            }
+
+            .tech-icon {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+                margin-right: 16px;
+            }
+        }
+    }
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+
+    a {
+        border: 1px solid #ffffff;
+        padding: 16px 24px;
+        border-radius: 32px;
+        position: relative;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: rgba(61, 207, 182, 0.2);
+
+            .arrow-icon {
+                transform: scale(1.5); 
+            }
+            .hover-effect {
+                color: $primary-color-light;
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: color 0.3s ease;
+            color: #ffffff;
+
+            .arrow-icon {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+            }
+        }
+    }
+}
+
+
+    }
+
+.dialog-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .next-project {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+
+        .next-project-link {
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background-color: rgba(61, 207, 182, 0.2);
+
+                .arrow-icon {
+                    transform: scale(1.5);
+                }
+
+                .hover-effect {
+                    color: $primary-color-light;
+                }
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                transition: color 0.3s ease;
+                color: #ffffff;
+                font-size: 20px;
+
+                .arrow-icon {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: contain;
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+}
 }

@@ -111,7 +111,7 @@ section{
             display: inline-block;
             transition: color 0.3s ease;
 
-            &:hover {
+            &.hover-effect {
 
                 color: $primary-color-light;
             }

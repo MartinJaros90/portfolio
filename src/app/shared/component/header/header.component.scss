@@ -87,6 +87,7 @@ section{
         opacity: 1;
     }
 }
+
 .header-container{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.731), rgba(61, 207, 183, 0.023)); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.057);
@@ -146,5 +147,38 @@ section{
         color: $text-color; 
         text-align: center;
         margin: 0;
+    }
+}
+
+
+
+
+
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(61, 207, 182, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(61, 207, 182, 0.2);
+        transform: scale(1.1);
+    }
+
+    .toggle-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            fill: $primary-color-light;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+            transform: rotate(45deg);
+        }
     }
 }

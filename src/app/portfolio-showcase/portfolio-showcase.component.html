@@ -13,7 +13,7 @@
       <div
         class="portfolio-menu-item"
         data-project="pokedex"
-        (click)="openDialog('pokedex')"
+        (click)="openDialog('Pokédex')"
       >
         <span>Pokédex</span>
         <div class="portfolio-menu-item-tech">
@@ -57,9 +57,87 @@
   >
     <div class="dialog-content" (click)="$event.stopPropagation()">
       <span class="close-button" (click)="closeDialog()">&times;</span>
-      <div class="dialog-body" *ngIf="selectedProject">
-        <h2>{{ selectedProject }}</h2>
-        <!-- weitere Projektdetails -->
+      <div
+        class="dialog-body"
+        *ngIf="selectedProject && getSelectedProjectData()"
+      >
+        <div class="dialog-left">
+          <div class="project-number">
+            {{ getSelectedProjectData()!.number.toString().padStart(2, "0") }}
+          </div>
+          <h2>{{ getSelectedProjectData()!.name }}</h2>
+
+          <div class="project-description">
+            <h3>What is this project about?</h3>
+            <p>
+              {{
+                language === "de"
+                  ? getSelectedProjectData()!.ueber
+                  : getSelectedProjectData()!.about
+              }}
+            </p>
+          </div>
+
+          <div class="tech-stack">
+            <div
+              class="tech-item"
+              *ngFor="
+                let tech of getSelectedProjectData()!.technologies.split(', ')
+              "
+            >
+              <span class="tech-name">{{ tech }}</span>
+
+              <img
+                *ngIf="getTechIcon(tech)"
+                [src]="getTechIcon(tech)"
+                [alt]="tech"
+                class="tech-icon"
+              />
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a [href]="getSelectedProjectData()!.github" target="_blank">
+              <span class="hover-effect">
+                GitHub
+                <img
+                  src="../../../assets/icons/arrow-outward.png"
+                  alt="arrow"
+                  class="arrow-icon"
+                />
+              </span>
+            </a>
+            <a [href]="getSelectedProjectData()!.test" target="_blank">
+              <span class="hover-effect">
+                Live Test
+                <img
+                  src="../../../assets/icons/arrow-outward.png"
+                  alt="arrow"
+                  class="arrow-icon"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="dialog-right">
+          <img
+            [src]="getSelectedProjectData()!.image"
+            [alt]="getSelectedProjectData()!.name"
+          />
+          <div class="next-project">
+            <a (click)="goToNextProject()" class="next-project-link">
+              <span class="hover-effect">
+                Next Project
+                <img
+                  src="../../../assets/icons/arrow-right.png"
+                  alt="arrow"
+                  class="arrow-icon"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
