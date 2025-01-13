@@ -46,6 +46,7 @@ section{
         font-weight: 700;
         font-size: 128px;
         margin-bottom: 42px;
+        text-align: center;
     }
 }
 
@@ -238,3 +239,6 @@ address{
         opacity: 1;
     }
 }
+
+
+@import '../hero-section/hero-section-responsive.scss';

@@ -1,0 +1,120 @@
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 1001;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $text-color;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    &.open {
+        span {
+            &:first-child {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.desktop-nav {
+    @include tablet {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($background-color, 0.98);
+    transition: right 0.3s ease;
+
+    &.open {
+        right: 0;
+    }
+
+    .mobile-links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .mobile-link {
+        font-size: 24px;
+        color: $text-color;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $primary-color-light;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+
+    @include tablet {
+        display: block;
+    }
+}
+
+@include mobile {
+    .logo-container {
+        .header-name {
+            display: none;
+        }
+    }
+
+    .mobile-nav {
+        .mobile-links {
+            padding-top: 100px;
+        }
+    }
+}

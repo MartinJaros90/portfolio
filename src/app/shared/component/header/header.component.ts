@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  isMenuOpen = false;
   isGerman = true;
   isAnimating = false;
   currentLanguageIcon = '../../../../assets/icons/de-active.png';
@@ -18,12 +19,22 @@ export class HeaderComponent {
     setTimeout(() => {
       this.isGerman = !this.isGerman;
       this.currentLanguageIcon = this.isGerman
-        ? '../../../../assets/icons/de-active.png'
-        : '../../../../assets/icons/en-active.png';
+        ? 'assets/icons/de-active.png'
+        : 'assets/icons/en-active.png';
     }, 200);
 
     setTimeout(() => {
       this.isAnimating = false;
     }, 400);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+    document.body.style.overflow = 'auto';
   }
 }

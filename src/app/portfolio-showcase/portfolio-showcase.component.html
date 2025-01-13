@@ -15,7 +15,10 @@
         data-project="pokedex"
         (click)="openDialog('Pokédex')"
       >
-        <span>Pokédex</span>
+        <span
+          >Pokédex
+          <img src="../../assets/icons/arrow.png" alt="arrow-icon" />
+        </span>
         <div class="portfolio-menu-item-tech">
           <span class="separator">HTML </span
           ><span class="separator">CSS</span>
@@ -29,7 +32,10 @@
         data-project="sharkie"
         (click)="openDialog('sharkie')"
       >
-        <span>Sharkie</span>
+        <span
+          >Sharkie
+          <img src="../../assets/icons/arrow.png" alt="arrow-icon" />
+        </span>
         <div class="portfolio-menu-item-tech">
           <span class="separator">HTML </span><span class="separator">CSS</span
           ><span class="separator">JavaScript</span>
@@ -41,7 +47,10 @@
         data-project="join"
         (click)="openDialog('join')"
       >
-        <span>Join</span>
+        <span
+          >Join
+          <img src="../../assets/icons/arrow.png" alt="arrow-icon" />
+        </span>
         <div class="portfolio-menu-item-tech">
           <span class="separator">HTML </span><span class="separator">CSS</span>
           <span class="separator">JavaScript</span>
@@ -57,10 +66,9 @@
   >
     <div class="dialog-content" (click)="$event.stopPropagation()">
       <span class="close-button" (click)="closeDialog()">&times;</span>
-      <div
-        class="dialog-body"
-        *ngIf="selectedProject && getSelectedProjectData()"
-      >
+
+      @if (selectedProject && getSelectedProjectData()) {
+      <div class="dialog-body">
         <div class="dialog-left">
           <div class="project-number">
             {{ getSelectedProjectData()!.number.toString().padStart(2, "0") }}
@@ -79,21 +87,15 @@
           </div>
 
           <div class="tech-stack">
-            <div
-              class="tech-item"
-              *ngFor="
-                let tech of getSelectedProjectData()!.technologies.split(', ')
-              "
-            >
+            @for (tech of getSelectedProjectData()!.technologies.split(', ');
+            track tech) {
+            <div class="tech-item">
               <span class="tech-name">{{ tech }}</span>
-
-              <img
-                *ngIf="getTechIcon(tech)"
-                [src]="getTechIcon(tech)"
-                [alt]="tech"
-                class="tech-icon"
-              />
+              @if (getTechIcon(tech)) {
+              <img [src]="getTechIcon(tech)" [alt]="tech" class="tech-icon" />
+              }
             </div>
+            }
           </div>
 
           <div class="project-links">
@@ -139,6 +141,7 @@
           </div>
         </div>
       </div>
+      }
     </div>
   </div>
 </section>

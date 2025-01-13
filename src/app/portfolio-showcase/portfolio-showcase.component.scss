@@ -125,11 +125,25 @@ section {
     &:hover{
         cursor: pointer;
         background-color: $primary-color-dark;
+        >span >img {
+                opacity: 1;
+            }
     }
 
 
     >span{
         padding-left: 24px;
+        padding-left: 24px;
+        display: flex; 
+        align-items: center; 
+        gap: 8px;
+        >img{
+            opacity: 0;
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.3s ease-in-out;
+
+        }
     }
 
     &.last{

@@ -1,18 +1,23 @@
 <section class="header-container">
   <div class="content-wrapper">
-    <div class="header-links">
-      <div class="language-switcher" (click)="toggleLanguage()">
-        <img
-          class="language-switcher__icon"
-          [class.language-switcher__icon--animating]="isAnimating"
-          [src]="currentLanguageIcon"
-          [alt]="isGerman ? 'Deutsch' : 'English'"
-        />
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <div class="header-links">
+        <div class="language-switcher" (click)="toggleLanguage()">
+          <img
+            class="language-switcher__icon"
+            [class.language-switcher__icon--animating]="isAnimating"
+            [src]="currentLanguageIcon"
+            [alt]="isGerman ? 'Deutsch' : 'English'"
+          />
+        </div>
+        <a class="header-link" href="#about">About me</a>
+        <a class="header-link" href="#skills">Skills</a>
+        <a class="header-link" href="#portfolio">Portfolio</a>
       </div>
-      <a class="header-link" href="">About me</a>
-      <a class="header-link" href="">Skills</a>
-      <a class="header-link" href="">Portfolio</a>
-    </div>
+    </nav>
+
+    <!-- Logo Container -->
     <div class="logo-container">
       <span class="logo-icon">MJ</span>
       <div class="header-name">
@@ -20,5 +25,34 @@
         <span class="last-name">Jaros</span>
       </div>
     </div>
+
+    <!-- Hamburger Button -->
+    <button
+      class="hamburger-btn"
+      (click)="toggleMenu()"
+      [class.open]="isMenuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" [class.open]="isMenuOpen">
+      <div class="mobile-links">
+        <div class="language-switcher mobile" (click)="toggleLanguage()">
+          <img
+            class="language-switcher__icon"
+            [src]="currentLanguageIcon"
+            [alt]="isGerman ? 'Deutsch' : 'English'"
+          />
+        </div>
+        <a class="mobile-link" href="#about" (click)="closeMenu()">About me</a>
+        <a class="mobile-link" href="#skills" (click)="closeMenu()">Skills</a>
+        <a class="mobile-link" href="#portfolio" (click)="closeMenu()"
+          >Portfolio</a
+        >
+      </div>
+    </nav>
   </div>
 </section>

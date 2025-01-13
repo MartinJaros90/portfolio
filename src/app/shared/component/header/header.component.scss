@@ -1,5 +1,6 @@
 @import '../../../../variables';
 
+
 section{
     padding: 0 5%;
     background-color: transparent;
@@ -91,7 +92,9 @@ section{
 .header-container{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.731), rgba(61, 207, 183, 0.023)); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.057);
-    
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo-container{
@@ -150,11 +153,6 @@ section{
     }
 }
 
-
-
-
-
-
 .theme-toggle {
     cursor: pointer;
     padding: 8px;
@@ -182,3 +180,6 @@ section{
         }
     }
 }
+
+
+@import '../header/header.responsive.scss';

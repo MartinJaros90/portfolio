@@ -1,0 +1,114 @@
+@import '../../../../src/variables';
+
+
+@include tablet {
+    .hero {
+        >h2 {
+            font-size: 32px;
+        }
+
+        >h1 {
+            font-size: 90px;
+        }
+    }
+
+    .vertical-line {
+        &.left {
+            left: 40px; 
+        }
+
+        &.right {
+            right: 40px; 
+        }
+    }
+
+    aside {
+        right: -79px; 
+    }
+
+    .marquee-content {
+        >span {
+            font-size: 20px;
+        }
+    }
+}
+
+@include mobile {
+    .hero {
+        >h2 {
+            font-size: 24px;
+        }
+
+        >h1 {
+            font-size: 42px;
+        }
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 24px;
+
+        >a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .vertical-line {
+        &.left {
+            left: 16px;
+        }
+
+        &.right {
+            right: 16px;
+        }
+    }
+
+    aside {
+        right: -78px;
+        bottom: 220px; 
+
+        address {
+            font-size: 16px;
+            margin-bottom: 80px; 
+        }
+    }
+
+    .marquee-container {
+        height: 48px; 
+    }
+
+    .marquee-content {
+        >span {
+            font-size: 16px;
+        }
+
+        .dot {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+    }
+}
+
+
+@media (max-width: 360px) {
+    .hero {
+        >h1 {
+            font-size: 36px;
+        }
+    }
+
+    .vertical-line {
+        &.left {
+            left: 8px;
+        }
+
+        &.right {
+            right: 8px;
+        }
+    }
+
+    aside {
+        right: 8px;
+    }
+}
