@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,36 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isGerman = true;
   isAnimating = false;
+  isScrolled = false;
+  isHeaderVisible = true;
+  lastScrollPosition = 0;
   currentLanguageIcon = '../../../../assets/icons/de-active.png';
+
+  ngOnInit() {
+    fromEvent(window, 'scroll')
+      .pipe(debounceTime(10))
+      .subscribe(() => {
+        this.handleScroll();
+      });
+  }
+
+  private handleScroll() {
+    const currentScroll = window.scrollY;
+
+    this.isScrolled = currentScroll > 100;
+
+    if (currentScroll > this.lastScrollPosition && currentScroll > 200) {
+      this.isHeaderVisible = false;
+    } else {
+      this.isHeaderVisible = true;
+    }
+
+    this.lastScrollPosition = currentScroll;
+  }
 
   toggleLanguage() {
     this.isAnimating = true;

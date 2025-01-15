@@ -1,0 +1,21 @@
+@media (max-width: 1024px) {
+    .contact-container {
+        gap: 60px;
+    }
+
+    .left-content h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+}

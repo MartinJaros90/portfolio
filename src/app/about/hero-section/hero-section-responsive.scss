@@ -1,6 +1,18 @@
 @import '../../../../src/variables';
 
 
+@include desktop {
+    .hero {
+        >h2 {
+            font-size: 32px;
+        }
+
+        >h1 {
+            font-size: 98px;
+        }
+    }
+}
+
 @include tablet {
     .hero {
         >h2 {

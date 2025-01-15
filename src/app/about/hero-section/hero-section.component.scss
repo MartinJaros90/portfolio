@@ -51,6 +51,9 @@ section{
 }
 
 .hero-container{
+    container-type: inline-size;
+    container-name: hero;
+}
 
 .buttons {
         display: flex;
@@ -79,9 +82,7 @@ section{
                 }
             }
         }
-    }
-
-
+    
 .hidden {
     display: none;
 }
@@ -95,6 +96,7 @@ section{
     left: 50%;
     transform: translateX(-50%) skewY(-3deg);
     background-color: rgba(55, 55, 55, 0.52);
+    backdrop-filter: blur(2px);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -136,7 +138,7 @@ section{
 }
 
 .left {
-    left: 120px; 
+    left: 80px; 
     height: 320px;
     bottom: 0;
     background-color: $primary-color-light;
@@ -144,7 +146,7 @@ section{
 }
 
 .right {
-    right: 120px; 
+    right: 80px; 
     bottom: 0; 
     background-color: $text-color;
 }
@@ -170,7 +172,7 @@ section{
 
 aside{
     position: absolute;
-    right: 0px;
+    right: -37px;
     bottom: 244px;
     display: flex;
     flex-direction: column;
@@ -240,5 +242,18 @@ address{
     }
 }
 
+@container hero (min-width: 1920px) {
+    .vertical-line.left {
+        left: calc(50% - 880px);
+    }
+
+    .vertical-line.right {
+        right: calc(50% - 880px);
+    }
+
+    aside {
+        right: calc(50% - 997px);
+    }
+}
 
 @import '../hero-section/hero-section-responsive.scss';

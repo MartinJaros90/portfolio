@@ -1,0 +1,213 @@
+@import '../../../src/variables';
+
+section {
+    background-color: #1A1A1A;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Code', monospace;
+}
+
+.content-wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.left-content {
+    width: 45%;
+
+    h3 {
+        color: $primary-color-light;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    h2 {
+        font-size: 64px;
+        color: $primary-color-light;
+        margin-bottom: 48px;
+        font-family: 'Fira Code', monospace;
+        line-height: 1.1;
+    }
+}
+
+.contact-header {
+    border: none;
+    padding: 0;
+    background: none;
+
+    h2 {
+        font-size: 64px !important;
+        margin-bottom: 48px;
+    }
+
+    h4 {
+        font-size: 32px;
+        color: $primary-color-light;
+        margin-bottom: 24px;
+    }
+
+    span {
+        font-family: 'karla';
+        color: $text-color;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+.info-section {
+    margin-bottom: 32px;
+
+    .highlight-text {
+        font-size: 16px;
+        color: $text-color;
+
+        a {
+            color: $primary-color-light;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.right-content {
+    width: 45%;
+}
+
+.contact-form {
+    .form-group {
+        margin-bottom: 32px;
+
+        &:first-child {
+            padding-top: 32px;
+            border-top: 1px solid $primary-color-light;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: $primary-color-light;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 16px 0;
+            border: none;
+            border-bottom: 1px solid $primary-color-light;
+            background-color: transparent;
+            color: $text-color;
+            font-family: 'karla';
+            font-size: 18px;
+            transition: all 0.3s ease;
+
+            &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px #1A1A1A inset !important;
+                    -webkit-text-fill-color: $text-color !important;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+
+            &::placeholder {
+                color: rgba(#8F8F8F, 0.5);
+            }
+
+                &.error {
+                    border-bottom-color: #FF3333;
+                    background-color: transparent !important;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-bottom-color: $primary-color-light;
+                    background-color: transparent !important; 
+                }
+
+                &.ng-valid {
+                    background-color: transparent !important; 
+                }
+        }
+
+        &.checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            input {
+                width: 20px;
+                height: 20px;
+                margin-top: 2px;
+                accent-color: $primary-color-light;
+            }
+
+            label {
+                margin-bottom: 0;
+                font-size: 16px;
+                color: $text-color;
+                line-height: 1.4;
+                font-family: 'karla';
+                font-weight: 300;
+
+                a {
+                    color: $primary-color-light;
+                    font-family: 'karla';
+                    font-size: 16px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .error-message {
+        color: #FF3333;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    button {
+        width: auto;
+        padding: 16px 32px;
+        border: 1px solid $text-color;
+        border-radius: 40px;
+        background-color: rgba(#8F8F8F, 0.1);
+        color: $text-color;
+        font-family: 'Fira Code', monospace;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover:not(:disabled) {
+            background-color: rgba($primary-color-light, 0.1);
+            color: $primary-color-light;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+@import '../contact/contact-responsive.scss';

@@ -1,4 +1,8 @@
-<section class="header-container">
+<section
+  class="header-container"
+  [class.scrolled]="isScrolled"
+  [class.header-hidden]="!isHeaderVisible"
+>
   <div class="content-wrapper">
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">

@@ -1,1 +1,100 @@
-<p>contact works!</p>
+<section>
+  <div class="content-wrapper">
+    <div class="contact-container">
+      <div class="left-content">
+        <h3>Contact me</h3>
+        <div class="contact-header">
+          <h2>
+            Let's work <br />
+            together
+          </h2>
+
+          <div class="info-section">
+            <h4>Got a problem to solve?</h4>
+            <span>
+              Contact me through this form, I am interested in hearing from you,
+              knowing your ideas and contributing to your projects with my work.
+            </span>
+          </div>
+
+          <div class="info-section">
+            <span class="highlight-text">
+              Need a Frontend developer? <a href="#">Let's Talk </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">What's your name?</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name goes here"
+              [formControl]="nameControl"
+              [class.error]="nameControl.invalid && nameControl.touched"
+            />
+            <span
+              class="error-message"
+              *ngIf="nameControl.invalid && nameControl.touched"
+            >
+              Please enter your name.
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">What's your email?</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="youremail@email.com"
+              [formControl]="emailControl"
+              [class.error]="emailControl.invalid && emailControl.touched"
+            />
+            <span
+              class="error-message"
+              *ngIf="emailControl.invalid && emailControl.touched"
+            >
+              Please enter your email address.
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">How can I help you?</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Hello Martin, I am interested in..."
+              [formControl]="messageControl"
+              [class.error]="messageControl.invalid && messageControl.touched"
+            ></textarea>
+            <span
+              class="error-message"
+              *ngIf="messageControl.invalid && messageControl.touched"
+            >
+              Please enter a message.
+            </span>
+          </div>
+
+          <div class="form-group checkbox">
+            <input
+              type="checkbox"
+              id="privacy"
+              [formControl]="privacyControl"
+            />
+            <label for="privacy">
+              I've read the <a href="#">privacy policy</a> and agree to the
+              processing of my data as outlined.
+            </label>
+          </div>
+
+          <button type="submit" [disabled]="!isFormValid()">
+            Say Hello ;)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
