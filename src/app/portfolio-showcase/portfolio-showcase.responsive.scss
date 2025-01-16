@@ -1,0 +1,152 @@
+@import '../../variables';
+
+@include desktop {
+    .featured-projects-container {
+        h2 {
+            font-size: 48px;
+        }
+    }
+
+    .portfolio-menu {
+        width: 70vw;
+    }
+
+    .portfolio-menu-item {
+        &::before,
+        &::after {
+            right: calc(-200px - 45px);
+            width: 200px;
+            height: 140px;
+        }
+    }
+}
+
+@include tablet {
+    .featured-projects-container {
+        margin-bottom: 48px;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    .portfolio-menu {
+        width: 100%;
+    }
+
+    .portfolio-menu-item {
+        font-size: 20px;
+        padding: 16px 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .project-dialog .dialog-content {
+        width: 90%;
+        padding: 24px;
+
+        .dialog-body {
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .dialog-left {
+            width: 100%;
+
+            .project-number {
+                font-size: 48px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .project-links {
+            justify-content: center;
+        }
+
+        .dialog-right {
+            width: 100%;
+        }
+    }
+}
+
+@include mobile {
+    .featured-projects-container {
+        margin-bottom: 32px;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .portfolio-menu-item {
+        font-size: 16px;
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+
+        .portfolio-menu-item-tech {
+            font-size: 12px;
+        }
+    }
+
+    .project-dialog .dialog-content {
+        padding: 16px;
+
+        .close-button {
+            top: 8px;
+            right: 8px;
+        }
+
+        .project-number {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .project-description {
+            h3 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .project-links {
+            flex-direction: column;
+            gap: 16px;
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .next-project {
+            position: static;
+            margin-top: 24px;
+            text-align: center;
+        }
+    }
+}

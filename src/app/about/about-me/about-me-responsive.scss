@@ -103,7 +103,7 @@
 
 
     .about-me-content {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
 
@@ -124,6 +124,24 @@
     }
 }
 
+@media screen and (max-width: 680px) and (min-width: 480px) {
+    .about-me-content {
+            width: 100%;
+            margin: 0 auto 32px auto;
+            max-height: none;
+            align-self: center;
+        }
+    
+        .about-me-header {
+            font-size: 16px;
+            padding: 24px;
+    
+            h2 {
+                font-size: 32px;
+            }
+        }
+}
+
 @include mobile {
     section {
         min-height: 100vh;
@@ -140,14 +158,11 @@
     }
 
     .profile-image-container {
-        width: 85%;
+        width: 100%;
         margin-top: 0;
 
         .cover-image {
-            top: 5%;
-            right: -5%;
-            width: 100%;
-            height: auto;
+            display: none;
         }
 
         .profil {
@@ -157,14 +172,14 @@
     }
 
     .about-me-content {
-        width: 90%;
+        width: 100%;
         margin: 0 auto 32px auto;
         max-height: none; 
         align-self: center;
     }
 
     .about-me-header {
-        font-size: 14px;
+    
         padding: 16px;
 
         h2 {

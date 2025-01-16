@@ -52,7 +52,7 @@
     }
 
     .skill-set-content {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         max-height: none;
 
@@ -62,7 +62,7 @@
     }
 
     .skill-set-header {
-        padding: 20px;
+        padding: 24px;
 
         h2 {
             font-size: 36px;
@@ -106,7 +106,7 @@
         .mindset-frame {
             width: 120px !important;
             top: -70px;
-            left: 50%;
+            left: 70%;
             transform: translateX(-50%) scale(0.95);
         }
 
@@ -131,7 +131,7 @@
     }
 
     .skill-set-content {
-        width: 90%;
+        width: 100%;
 
         h3 {
             font-size: 18px;
@@ -162,6 +162,11 @@
             text-align: center;
             gap: 8px;
 
+            img{
+                width: 56px;
+                height: 56px;
+            }
+
             span {
                 font-size: 12px;
             }
@@ -172,7 +177,7 @@
         .mindset-frame {
             width: 100px !important;
             top: -60px;
-            left: 50%; 
+            left: 83%; 
             transform: translateX(-50%) scale(0.95);
         }
 
