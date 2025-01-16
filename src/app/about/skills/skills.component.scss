@@ -119,68 +119,65 @@ section{
     }
 }
 
-.right{
+.right {
     width: 40vw;
-        height: auto;
-        max-width: 560px;
-        max-height: 560px;
+    height: auto;
+    max-width: 560px;
+    max-height: 560px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 
-        display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 16px; 
-        
-            >span:nth-child(n+9) {
-                grid-column: span 1; 
-            }
-        
-            >span:nth-child(9),
-            >span:nth-child(10),
-            >span:nth-child(11) {
-                grid-column: span 1;
-            }
-
-    >span{
-        margin: 24px;
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 8px;
+        margin: 24px;
 
-        >img{
+        img {
             width: 64px;
             height: 64px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            &:hover{
+            transition: transform 0.3s ease;
+            &:hover {
                 transform: scale(1.07);
             }
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            margin-top: 8px;
         }
     }
 }
 
 .mindset-container {
     position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
-
-    &:hover {
-            color: $primary-color-light;
-        }
-
+    
     .mindset-frame {
         opacity: 0;
-        position: absolute; 
+        position: absolute;
         top: -90px;
-        left: -3px;
+        left: 100%;
+        transform: translateX(-50%) scale(0.95);
         transition: all 0.3s ease-in-out;
-        visibility: hidden; 
-        transform: scale(0.95); 
+        visibility: hidden;
+        width: 160px !important;
+        height: auto !important;
+        pointer-events: none;
     }
 
-        &:hover .mindset-frame {
-            visibility: visible; 
+    &:hover {
+        color: $primary-color-light;
+        
+        .mindset-frame {
+            visibility: visible;
             opacity: 1;
-            transform: scale(1.07);
+            transform: translateX(-50%) scale(1.07);
         }
+    }
 }
 
-.mindset-container .mindset-frame{
-    width: 160px !important;
-    height: auto !important;
-}
+@import './skills-responsive.scss';

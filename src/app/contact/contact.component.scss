@@ -70,7 +70,7 @@ section {
     margin-bottom: 32px;
 
     .highlight-text {
-        font-size: 16px;
+        font-size: 18px;
         color: $text-color;
 
         a {
@@ -81,6 +81,9 @@ section {
                 text-decoration: underline;
             }
         }
+    }
+    span{
+        font-size: 18px;
     }
 }
 

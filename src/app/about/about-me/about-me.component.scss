@@ -24,7 +24,7 @@ section {
 
     .cover-image {
         position: absolute;
-        top: 5%;
+        top: 3%;
         right: 5%;
         width: 40vw;
         height: auto;
@@ -100,3 +100,5 @@ width: 40vw;
         margin-bottom: 0;
     }
 }
+
+@import './about-me-responsive.scss';

@@ -13,6 +13,18 @@
     }
 }
 
+@media screen and (max-width: 564px) {
+    .buttons {
+        flex-direction: column;
+        gap: 24px;
+        
+        >a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
 @include tablet {
     .hero {
         >h2 {
@@ -30,12 +42,14 @@
         }
 
         &.right {
-            right: 40px; 
+            right: 40px;
+            height: 160px; 
         }
     }
 
     aside {
         right: -79px; 
+        bottom: 160px;
     }
 
     .marquee-content {
@@ -78,7 +92,7 @@
 
     aside {
         right: -78px;
-        bottom: 220px; 
+        bottom: 160px; 
 
         address {
             font-size: 16px;
@@ -120,7 +134,4 @@
         }
     }
 
-    aside {
-        right: 8px;
-    }
 }

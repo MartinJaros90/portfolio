@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { debounceTime, fromEvent } from 'rxjs';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -17,26 +17,27 @@ export class HeaderComponent implements OnInit {
   lastScrollPosition = 0;
   currentLanguageIcon = '../../../../assets/icons/de-active.png';
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit() {
-    fromEvent(window, 'scroll')
-      .pipe(debounceTime(10))
-      .subscribe(() => {
-        this.handleScroll();
-      });
+    if (isPlatformBrowser(this.platformId)) {
+      window.addEventListener('scroll', () => this.handleScroll());
+    }
   }
 
-  private handleScroll() {
-    const currentScroll = window.scrollY;
+  private handleScroll(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const currentScroll = window.scrollY;
+      this.isScrolled = currentScroll > 100;
 
-    this.isScrolled = currentScroll > 100;
+      if (currentScroll > this.lastScrollPosition && currentScroll > 200) {
+        this.isHeaderVisible = false;
+      } else {
+        this.isHeaderVisible = true;
+      }
 
-    if (currentScroll > this.lastScrollPosition && currentScroll > 200) {
-      this.isHeaderVisible = false;
-    } else {
-      this.isHeaderVisible = true;
+      this.lastScrollPosition = currentScroll;
     }
-
-    this.lastScrollPosition = currentScroll;
   }
 
   toggleLanguage() {

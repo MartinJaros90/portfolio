@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+ @include desktop {
     .contact-container {
         gap: 60px;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include tablet {
     .contact-container {
         flex-direction: column;
         gap: 48px;
