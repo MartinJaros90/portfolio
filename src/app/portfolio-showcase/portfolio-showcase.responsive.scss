@@ -3,7 +3,7 @@
 @include desktop {
     .featured-projects-container {
         h2 {
-            font-size: 48px;
+            font-size: 64px;
         }
     }
 
@@ -30,8 +30,9 @@
         }
 
         h2 {
-            font-size: 36px;
+            margin-bottom: 42px;
         }
+
     }
 
     .portfolio-menu {
@@ -40,13 +41,22 @@
 
     .portfolio-menu-item {
         font-size: 20px;
-        padding: 16px 0;
+        padding: 40px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        >span{
+            padding-left: 0;
+            font-size: 24px;
+            padding-bottom: 12px;
+        }
 
         &::before,
         &::after {
-            display: none;
+            display: none !important;
         }
     }
+
 
     .project-dialog .dialog-content {
         width: 90%;
@@ -77,34 +87,44 @@
             width: 100%;
         }
     }
+
+    .portfolio-menu-item-tech {
+        .separator {
+            margin: 0px;
+            &:first-child::before {
+                display: none;
+            }
+            &::before {
+                margin: 0 4px;
+            }
+        }
+    }
 }
 
 @include mobile {
+    .portfolio-wrapper {
+        padding-top: 120px;
+    }
+    
     .featured-projects-container {
-        margin-bottom: 32px;
 
         h3 {
             font-size: 18px;
-        }
-
-        h2 {
-            font-size: 28px;
-        }
-
-        span {
-            font-size: 14px;
         }
     }
 
     .portfolio-menu-item {
         font-size: 16px;
-        padding: 12px 0;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+        &::before,
+        &::after {
+            display: none !important;
+        }
 
         .portfolio-menu-item-tech {
-            font-size: 12px;
+            font-size: 16px;
         }
     }
 
@@ -147,6 +167,14 @@
             position: static;
             margin-top: 24px;
             text-align: center;
+        }
+    }
+
+    .portfolio-menu-item-tech {
+        .separator {
+            &:first-child::before {
+                display: none;
+            }
         }
     }
 }

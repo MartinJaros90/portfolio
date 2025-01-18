@@ -1,0 +1,86 @@
+@import '../../../../variables';
+
+section {
+    padding:3% 5%;
+    min-height: 120px;
+    width: 100%;
+    @include center-flex;
+    background-color: #1A1A1A;
+    font-family: 'karla';
+}
+
+.footer-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    @include center-flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    .left {
+        @include center-flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-info {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+    >span {
+        gap: 12px;
+        font-weight: 300;
+    }
+    }
+}
+
+.footer-copyright {
+
+    >span {
+        font-family:'Fira Code';
+        color: $primary-color-light;
+    }
+}
+
+.footer-links {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 24px;
+
+    &__item {
+        position: relative; 
+        color: $text-color;
+        text-decoration: none;
+        padding-left: 20px; 
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $primary-color-light;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:hover {
+            color: $primary-color-light;
+        }
+    }
+}
+
+
+
+@import 'footer-responsive';

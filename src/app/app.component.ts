@@ -7,6 +7,7 @@ import { AboutMeComponent } from './about/about-me/about-me.component';
 import { SkillsComponent } from './about/skills/skills.component';
 import { PortfolioShowcaseComponent } from './portfolio-showcase/portfolio-showcase.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './shared/component/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
     SkillsComponent,
     PortfolioShowcaseComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

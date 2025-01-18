@@ -1,0 +1,72 @@
+@import '../../../../variables';
+
+
+@include tablet {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left links"
+            "copyright copyright";
+        gap: 30px;
+
+        .left {
+            grid-area: left;
+        }
+
+        .footer-links {
+            grid-area: links;
+            align-items: flex-end;
+        }
+
+        .footer-copyright {
+            grid-area: copyright;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+@include mobile {
+    section {
+        padding: 120px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "left"
+            "links"
+            "copyright";
+        gap: 30px;
+        text-align: center;
+
+        .left {
+            align-items: center;
+        }
+
+        .footer-info {
+            align-items: flex-start !important;
+        }
+    }
+
+    .footer-links {
+        align-items: center !important;
+        margin-top: 30px;
+
+
+        &__item {
+            padding-left: 0;
+            padding-right: 20px;
+
+            &::before {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    .footer-copyright {
+        margin-top: 30px;
+    }
+}
