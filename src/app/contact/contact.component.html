@@ -2,24 +2,21 @@
   <div class="content-wrapper">
     <div class="contact-container">
       <div class="left-content">
-        <h3>Contact me</h3>
+        <h3>{{ "CONTACT.SUBTITLE" | translate }}</h3>
         <div class="contact-header">
-          <h2>
-            Let's work <br />
-            together
-          </h2>
+          <h2>{{ "CONTACT.TITLE" | translate }}</h2>
 
           <div class="info-section">
-            <h4>Got a problem to solve?</h4>
-            <span>
-              Contact me through this form, I am interested in hearing from you,
-              knowing your ideas and contributing to your projects with my work.
-            </span>
+            <h4>{{ "CONTACT.PROBLEM.TITLE" | translate }}</h4>
+            <span>{{ "CONTACT.PROBLEM.DESCRIPTION" | translate }}</span>
           </div>
 
           <div class="info-section">
             <span class="highlight-text">
-              Need a Frontend developer? <a href="#">Let's Talk </a>
+              {{ "CONTACT.NEED_DEV" | translate }}
+              <span class="link-style">{{
+                "CONTACT.LETS_TALK" | translate
+              }}</span>
             </span>
           </div>
         </div>
@@ -28,11 +25,13 @@
       <div class="right-content">
         <form class="contact-form">
           <div class="form-group">
-            <label for="name">What's your name?</label>
+            <label for="name">{{
+              "CONTACT.FORM.NAME.LABEL" | translate
+            }}</label>
             <input
               type="text"
               id="name"
-              placeholder="Your name goes here"
+              [placeholder]="'CONTACT.FORM.NAME.PLACEHOLDER' | translate"
               [formControl]="nameControl"
               [class.error]="nameControl.invalid && nameControl.touched"
             />
@@ -40,16 +39,18 @@
               class="error-message"
               *ngIf="nameControl.invalid && nameControl.touched"
             >
-              Please enter your name.
+              {{ "CONTACT.FORM.ERRORS.NAME" | translate }}
             </span>
           </div>
 
           <div class="form-group">
-            <label for="email">What's your email?</label>
+            <label for="email">{{
+              "CONTACT.FORM.EMAIL.LABEL" | translate
+            }}</label>
             <input
               type="email"
               id="email"
-              placeholder="youremail@email.com"
+              [placeholder]="'CONTACT.FORM.EMAIL.PLACEHOLDER' | translate"
               [formControl]="emailControl"
               [class.error]="emailControl.invalid && emailControl.touched"
             />
@@ -57,16 +58,18 @@
               class="error-message"
               *ngIf="emailControl.invalid && emailControl.touched"
             >
-              Please enter your email address.
+              {{ "CONTACT.FORM.ERRORS.EMAIL" | translate }}
             </span>
           </div>
 
           <div class="form-group">
-            <label for="message">How can I help you?</label>
+            <label for="message">{{
+              "CONTACT.FORM.MESSAGE.LABEL" | translate
+            }}</label>
             <textarea
               id="message"
               rows="4"
-              placeholder="Hello Martin, I am interested in..."
+              [placeholder]="'CONTACT.FORM.MESSAGE.PLACEHOLDER' | translate"
               [formControl]="messageControl"
               [class.error]="messageControl.invalid && messageControl.touched"
             ></textarea>
@@ -74,7 +77,7 @@
               class="error-message"
               *ngIf="messageControl.invalid && messageControl.touched"
             >
-              Please enter a message.
+              {{ "CONTACT.FORM.ERRORS.MESSAGE" | translate }}
             </span>
           </div>
 
@@ -85,14 +88,16 @@
               [formControl]="privacyControl"
             />
             <label for="privacy">
-              I've read the
-              <a routerLink="/privacy-policy">privacy policy</a> and agree to
-              the processing of my data as outlined.
+              {{ "CONTACT.FORM.PRIVACY" | translate }}
+              <a href="/privacy-policy">{{
+                "CONTACT.FORM.PRIVACY_LINK" | translate
+              }}</a>
+              {{ "CONTACT.FORM.PRIVACY_END" | translate }}
             </label>
           </div>
 
           <button type="submit" [disabled]="!isFormValid()">
-            Say Hello ;)
+            {{ "CONTACT.FORM.SUBMIT" | translate }}
           </button>
         </form>
       </div>

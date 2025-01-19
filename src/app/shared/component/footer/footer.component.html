@@ -3,34 +3,34 @@
     <div class="left">
       <app-logo></app-logo>
       <div class="footer-info">
-        <span>Web Developer</span>
-        <span>St. Gallen, Switzerland</span>
+        <span>{{ "FOOTER.ROLE" | translate }}</span>
+        <span>{{ "FOOTER.LOCATION" | translate }}</span>
       </div>
     </div>
 
     <div class="footer-copyright">
-      <span>&copy; Martin Jaros 2024</span>
+      <span>&copy; {{ "FOOTER.COPYRIGHT" | translate }}</span>
     </div>
 
     <div class="footer-links">
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/MartinJaros90"
         target="_blank"
         class="footer-links__item"
-        >Github</a
+        >{{ "FOOTER.LINKS.GITHUB" | translate }}</a
       >
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://linkedin.com/in/martin-jaros-dev"
         target="_blank"
         class="footer-links__item"
-        >LinkedIn</a
+        >{{ "FOOTER.LINKS.LINKEDIN" | translate }}</a
       >
-      <a href="mailto:your.email@example.com" class="footer-links__item"
-        >Email</a
-      >
-      <a [routerLink]="['/legal-notice']" class="footer-links__item"
-        >Legal Notice</a
-      >
+      <a href="mailto:martinjaros88@gmail.com" class="footer-links__item">{{
+        "FOOTER.LINKS.EMAIL" | translate
+      }}</a>
+      <a [routerLink]="['/legal-notice']" class="footer-links__item">{{
+        "FOOTER.LINKS.LEGAL" | translate
+      }}</a>
     </div>
   </div>
 </section>

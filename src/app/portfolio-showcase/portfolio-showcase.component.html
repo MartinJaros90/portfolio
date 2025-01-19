@@ -1,12 +1,9 @@
 <section id="portfolio">
   <div class="portfolio-wrapper">
     <div class="featured-projects-container">
-      <h3>Portfolio</h3>
-      <h2>Featured Projects</h2>
-      <span>
-        Explore a selection of my work here - Interact with <br />
-        projects to see my skills in action.
-      </span>
+      <h3>{{ "PORTFOLIO.SUBTITLE" | translate }}</h3>
+      <h2>{{ "PORTFOLIO.TITLE" | translate }}</h2>
+      <span>{{ "PORTFOLIO.DESCRIPTION" | translate }}</span>
     </div>
 
     <div class="portfolio-menu">
@@ -76,7 +73,7 @@
           <h2>{{ getSelectedProjectData()!.name }}</h2>
 
           <div class="project-description">
-            <h3>What is this project about?</h3>
+            <h3>{{ "PORTFOLIO.DIALOG.WHAT_ABOUT" | translate }}</h3>
             <p>
               {{
                 language === "de"
@@ -101,7 +98,7 @@
           <div class="project-links">
             <a [href]="getSelectedProjectData()!.github" target="_blank">
               <span class="hover-effect">
-                GitHub
+                {{ "PORTFOLIO.DIALOG.GITHUB" | translate }}
                 <img
                   src="../../../assets/icons/arrow-outward.png"
                   alt="arrow"
@@ -111,7 +108,7 @@
             </a>
             <a [href]="getSelectedProjectData()!.test" target="_blank">
               <span class="hover-effect">
-                Live Test
+                {{ "PORTFOLIO.DIALOG.LIVE_TEST" | translate }}
                 <img
                   src="../../../assets/icons/arrow-outward.png"
                   alt="arrow"
@@ -130,7 +127,7 @@
           <div class="next-project">
             <a (click)="goToNextProject()" class="next-project-link">
               <span class="hover-effect">
-                Next Project
+                {{ "PORTFOLIO.DIALOG.NEXT_PROJECT" | translate }}
                 <img
                   src="../../../assets/icons/arrow-right.png"
                   alt="arrow"

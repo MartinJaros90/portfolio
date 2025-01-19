@@ -1,11 +1,13 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { LogoComponent } from '../logo/logo.component';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LogoComponent],
+  imports: [LogoComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -18,9 +20,15 @@ export class HeaderComponent implements OnInit {
   isGerman = false;
   isAnimating = false;
   currentLanguageIcon = '../../../../assets/icons/en-active.png';
-  currentLanguage: 'de' | 'en' = 'en';
+  currentLanguage: 'de' | 'en';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private translate: TranslateService
+  ) {
+    const initialLang = this.translate.currentLang || 'en';
+    this.currentLanguage = initialLang as 'de' | 'en';
+  }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -51,6 +59,11 @@ export class HeaderComponent implements OnInit {
 
     this.isAnimating = true;
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.translate.use(this.currentLanguage);
+    this.currentLanguageIcon =
+      this.currentLanguage === 'en'
+        ? '../../../../assets/icons/en-active.png'
+        : '../../../../assets/icons/de-active.png';
 
     setTimeout(() => {
       this.isAnimating = false;
@@ -61,6 +74,12 @@ export class HeaderComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       const sections = ['about', 'skills', 'portfolio'];
       const headerOffset = 150;
+
+      this.activeSection = '';
+
+      if (window.pageYOffset < 100) {
+        return;
+      }
 
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);

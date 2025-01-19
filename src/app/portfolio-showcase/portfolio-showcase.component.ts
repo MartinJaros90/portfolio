@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 type TechType = 'HTML' | 'CSS' | 'JavaScript' | 'Firebase' | 'Angular';
 
@@ -20,7 +21,7 @@ interface Card {
 @Component({
   selector: 'app-portfolio-showcase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './portfolio-showcase.component.html',
   styleUrl: './portfolio-showcase.component.scss',
 })
@@ -34,6 +35,15 @@ export class PortfolioShowcaseComponent {
   };
 
   selectedProject: string | null = null;
+
+  constructor(private translate: TranslateService) {
+    this.language = this.translate.currentLang || 'en';
+
+    // Subscribe to language changes
+    this.translate.onLangChange.subscribe((event) => {
+      this.language = event.lang;
+    });
+  }
 
   language: string = 'en';
   contentForCard: Card[] = [

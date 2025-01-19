@@ -204,8 +204,8 @@ section {
     .close-button {
         position: absolute;
         right: 24px;
-        top: 16px;
-        font-size: 28px;
+        top: 6px;
+        font-size: 42px;
         cursor: pointer;
         color: $primary-color-light;
         transition: color 0.2s ease;
@@ -272,7 +272,10 @@ section {
         }
 
         .project-description {
-            margin-bottom: 64px;
+            margin-bottom: 40px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
 
             h3 {
                 color: $primary-color-light;
@@ -281,13 +284,15 @@ section {
             }
 
             p {
-
                 font-family: 'Karla';
                 font-size: 20px;
+                line-height: 1.5;
+                flex-grow: 1;
             }
         }
 
     .tech-stack {
+        position: relative;
         display: flex;
         gap: 24px;
         margin-bottom: 48px;

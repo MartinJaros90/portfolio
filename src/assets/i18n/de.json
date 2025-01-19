@@ -1,0 +1,108 @@
+{
+  "HEADER": {
+    "NAV": {
+      "HOME": "Start",
+      "ABOUT": "Über mich",
+      "SKILLS": "Fähigkeiten",
+      "PORTFOLIO": "Portfolio",
+      "CONTACT": "Kontakt"
+    }
+  },
+  "HERO": {
+    "TITLE": "Frontend Entwickler",
+    "NAME": "Martin Jaros",
+    "MARQUEE": {
+      "REMOTE": "Verfügbar für Remote-Arbeit",
+      "DEVELOPER": "Frontend Entwickler",
+      "LOCATION": "Ansässig in St. Gallen",
+      "STATUS": "Offen für neue Herausforderungen"
+    },
+    "BUTTONS": {
+      "CHECK_WORK": "Meine Arbeit",
+      "CONTACT": "Kontaktiere mich"
+    }
+  },
+  "ABOUT": {
+    "SUBTITLE": "Wer ich bin",
+    "TITLE": "Über mich",
+    "DESCRIPTION": "Hi, ich bin ein deutschsprachiger Frontend Entwickler aus St. Gallen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, begeistere ich mich für die Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
+    "LOCATION": {
+      "TITLE": "Flexibel im Arbeitsumfeld",
+      "TEXT": "Ich kann sowohl vor Ort in St. Gallen als auch remote effektiv arbeiten."
+    },
+    "MINDSET": {
+      "TITLE": "Offen für Neues",
+      "TEXT": "Ich bin aufgeschlossen und suche stets nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern."
+    },
+    "APPROACH": {
+      "TITLE": "Meine Herangehensweise",
+      "TEXT": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code; es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+    }
+  },
+  "SKILLS": {
+    "SUBTITLE": "Technologien",
+    "TITLE": "Fähigkeiten",
+    "DESCRIPTION": "Meine Reise umfasste die Arbeit an verschiedenen Projekten unter Verwendung verschiedener Frontend-Technologien und Konzepte. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung vorne dabei zu sein.",
+    "NEW_SKILL": {
+      "TITLE": "Sie brauchen eine andere Fähigkeit?",
+      "CONTACT_INFO": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern."
+    },
+    "BUTTON": "Lass uns reden"
+  },
+  "CONTACT": {
+    "SUBTITLE": "Kontaktiere mich",
+    "TITLE": "Lass uns zusammen arbeiten",
+    "PROBLEM": {
+      "TITLE": "Ein Problem zu lösen?",
+      "DESCRIPTION": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich für Ihre Ideen und möchte mit meiner Arbeit zu Ihren Projekten beitragen."
+    },
+    "NEED_DEV": "Brauchen Sie einen Frontend Entwickler?",
+    "LETS_TALK": "Lass uns reden",
+    "FORM": {
+      "NAME": {
+        "LABEL": "Wie ist Ihr Name?",
+        "PLACEHOLDER": "Ihr Name"
+      },
+      "EMAIL": {
+        "LABEL": "Wie ist Ihre E-Mail?",
+        "PLACEHOLDER": "ihreemail@email.com"
+      },
+      "MESSAGE": {
+        "LABEL": "Wie kann ich Ihnen helfen?",
+        "PLACEHOLDER": "Hallo Martin, ich interessiere mich für..."
+      },
+      "PRIVACY": "Ich habe die ",
+      "PRIVACY_LINK": "Datenschutzerklärung",
+      "PRIVACY_END": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "SUBMIT": "Sag Hallo ;)",
+      "ERRORS": {
+        "NAME": "Bitte geben Sie Ihren Namen ein.",
+        "EMAIL": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+        "MESSAGE": "Bitte geben Sie eine Nachricht ein."
+      }
+    }
+  },
+  "PORTFOLIO": {
+    "SUBTITLE": "Portfolio",
+    "TITLE": "Ausgewählte Projekte",
+    "DESCRIPTION": "Entdecke eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "DIALOG": {
+      "WHAT_ABOUT": "Worum geht es in diesem Projekt?",
+      "TECH_STACK": "Technologie-Stack",
+      "GITHUB": "GitHub",
+      "LIVE_TEST": "Live Test",
+      "NEXT_PROJECT": "Nächstes Projekt"
+    }
+  },
+  "FOOTER": {
+    "ROLE": "Frontend Entwickler",
+    "LOCATION": "St. Gallen, Schweiz",
+    "COPYRIGHT": "2025 Martin Jaros. Alle Rechte vorbehalten",
+    "LINKS": {
+      "GITHUB": "GitHub",
+      "LINKEDIN": "LinkedIn",
+      "EMAIL": "E-Mail",
+      "LEGAL": "Impressum"
+    }
+  }
+}

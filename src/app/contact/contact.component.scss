@@ -70,13 +70,8 @@ section {
         font-size: 18px;
         color: $text-color;
 
-        a {
+        .link-style {
             color: $primary-color-light;
-            cursor: pointer;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
     span{

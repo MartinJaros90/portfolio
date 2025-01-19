@@ -36,21 +36,21 @@
           [class.active]="activeSection === 'about'"
           href="#about"
           (click)="scrollToSection('about', $event)"
-          >About me</a
+          >{{ "HEADER.NAV.ABOUT" | translate }}</a
         >
         <a
           class="header-link"
           [class.active]="activeSection === 'skills'"
           href="#skills"
           (click)="scrollToSection('skills', $event)"
-          >Skills</a
+          >{{ "HEADER.NAV.SKILLS" | translate }}</a
         >
         <a
           class="header-link"
           [class.active]="activeSection === 'portfolio'"
           href="#portfolio"
           (click)="scrollToSection('portfolio', $event)"
-          >Portfolio</a
+          >{{ "HEADER.NAV.PORTFOLIO" | translate }}</a
         >
       </div>
     </nav>
@@ -72,18 +72,35 @@
     <!-- Mobile Navigation -->
     <nav class="mobile-nav" [class.open]="isMenuOpen">
       <div class="mobile-links">
-        <div class="language-switcher mobile" (click)="toggleLanguage()">
-          <img
-            class="language-switcher__icon"
-            [src]="currentLanguageIcon"
-            [alt]="isGerman ? 'Deutsch' : 'English'"
-          />
+        <div
+          class="language-switcher"
+          (click)="toggleLanguage()"
+          [class.animating]="isAnimating"
+        >
+          <div class="switch-container">
+            <div
+              class="switch-option"
+              [class.active]="currentLanguage === 'en'"
+            >
+              EN
+            </div>
+            <div
+              class="switch-option"
+              [class.active]="currentLanguage === 'de'"
+            >
+              DE
+            </div>
+            <div
+              class="slider"
+              [class.slide-right]="currentLanguage === 'de'"
+            ></div>
+          </div>
         </div>
         <a
           class="mobile-link"
           href="#about"
           (click)="scrollToSection('about', $event)"
-          >About me</a
+          >{{ "HEADER.NAV.ABOUT" | translate }}</a
         >
         <a
           class="mobile-link"

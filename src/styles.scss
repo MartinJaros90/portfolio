@@ -35,3 +35,30 @@ a {
     color: inherit;
 }
 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-color-light;
+  border-radius: 5px;
+  border: 2px solid $background-color;
+  
+  &:hover {
+    background: darken($primary-color-light, 10%);
+  }
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color-light $background-color;
+}
+
