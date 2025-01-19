@@ -32,62 +32,115 @@ section{
 
 .header-link {
     position: relative;
-    color: $text-color; 
+    color: $text-color;
+    text-decoration: none;
+    padding: 16px 8px;
+    transition: color 0.3s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 
-    &::after {
-        content: ''; 
-        position: absolute; 
-        bottom: -8px; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        width: 8px; 
-        height: 8px; 
-        border-radius: 50%; 
-        background-color: $primary-color-light; 
-        opacity: 0; 
-        transition: opacity 0.3s;
+    &:focus {
+            outline: none; 
+        }
+    
+    &:focus-visible {
+        outline: none; 
     }
 
-    &:hover::after {
-        opacity: 1; 
+    &::after {
+        content: '•';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        color: $primary-color-light;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 25px;
+    }
+
+    &.active {
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        color: $primary-color-light;
+
+        &::after {
+            opacity: 1;
+        }
     }
 }
 
 .language-switcher {
+    position: relative;
     cursor: pointer;
-    perspective: 800px;
+    user-select: none;
+    margin: 0 20px;
 
-    &__icon {
-        width: 72px;
-        transition: all 0.2s ease-in-out;
-        transform-style: preserve-3d;
+    .switch-container {
+        display: flex;
+        background: rgba(61, 207, 182, 0.1);
+        border: 1px solid $primary-color-light;
+        border-radius: 20px;
+        padding: 4px;
+        position: relative;
+        width: 80px;
+        height: 36px;
+        transition: all 0.3s ease;
 
         &:hover {
+            background: rgba(61, 207, 182, 0.2);
             transform: scale(1.05);
-            filter: brightness(1.05);
         }
+    }
 
-        &--animating {
-            animation: flipLanguage 0.4s ease-in-out;
+    .switch-option {
+        flex: 1;
+        text-align: center;
+        color: $text-color;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        z-index: 2;
+        transition: color 0.3s ease;
+
+        &.active {
+            color: $background-color;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: calc(50% - 4px);
+        height: calc(100% - 8px);
+        background: $primary-color-light;
+        border-radius: 16px;
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &.slide-right {
+            transform: translateX(100%);
+        }
+    }
+
+    &.animating {
+        .slider {
+            animation: pulse 0.6s ease;
         }
     }
 }
 
-@keyframes flipLanguage {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    50% {
-        transform: rotateY(90deg) scale(0.95);
-        opacity: 0.2;
-    }
-
-    100% {
-        transform: rotateY(0deg);
-        opacity: 1;
-    }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
+
 
 .header-container {
     background: rgba(26, 26, 26, 0.5);

@@ -117,4 +117,17 @@
             padding-top: 100px;
         }
     }
+
+    .language-switcher {
+        .switch-container {
+            width: 70px;
+            height: 32px;
+        }
+
+        .switch-option {
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+
 }

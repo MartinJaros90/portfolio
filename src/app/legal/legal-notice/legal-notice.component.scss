@@ -1,0 +1,93 @@
+@import '../../../variables';
+
+.legal-container {
+    background-color: $background-color;
+    min-height: 100vh;
+    padding: 120px 5% 60px;
+    color: $text-color;
+
+    .content-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: $primary-color-light;
+        font-size: 40px;
+        margin-bottom: 32px;
+        font-family: 'Fira Code', monospace;
+    }
+
+    .legal-section {
+        margin-bottom: 40px;
+
+        h2 {
+            color: $primary-color-light;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+            font-family: 'Karla', sans-serif;
+        }
+
+        a {
+            color: $primary-color-light;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: darken($primary-color-light, 10%);
+            }
+        }
+    }
+
+    .source {
+        margin-top: 48px;
+        padding-top: 16px;
+        border-top: 1px solid rgba($text-color, 0.1);
+    }
+
+    .back-button {
+        margin-bottom: 32px;
+        
+        .back-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            color: $primary-color-light;
+            text-decoration: none;
+            font-size: 24px;
+            border: 1px solid $primary-color-light;
+            border-radius: 50%;
+            background-color: rgba(61, 207, 182, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(61, 207, 182, 0.2);
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-container {
+        padding: 100px 5% 40px;
+        font-size: 16px;
+
+        h1 {
+            font-size: 20px !important;
+        }
+
+        h2 {
+            font-size: 16px !important;
+        }
+    }
+}

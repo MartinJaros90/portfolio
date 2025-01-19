@@ -59,6 +59,7 @@ section{
         display: flex;
         flex-direction: row;
         gap: 48px;
+
         
 
         >a {
@@ -67,6 +68,8 @@ section{
             border-radius: 32px;
             position: relative; 
             transition: transform 0.3s ease, background-color 0.3s ease;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
             &:hover {
                     transform: scale(1.05); 
                     background-color: rgba(61, 207, 182, 0.2);

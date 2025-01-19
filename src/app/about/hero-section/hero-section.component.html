@@ -36,7 +36,11 @@
       </address>
       <div class="svg-container">
         <div class="svg-item">
-          <div class="svg-github">
+          <div
+            class="svg-github"
+            (click)="openGithub()"
+            style="cursor: pointer"
+          >
             <svg
               width="32"
               height="32"
@@ -78,8 +82,12 @@
     <div class="vertical-line right"></div>
 
     <div class="buttons hover-effect">
-      <a href="#"><span>Check my work</span></a>
-      <a href="#"><span>Contact me</span></a>
+      <a href="#portfolio" (click)="scrollToSection('portfolio', $event)">
+        <span>Check my work</span>
+      </a>
+      <a href="#contact" (click)="scrollToSection('contact', $event)">
+        <span>Contact me</span>
+      </a>
     </div>
 
     <div class="marquee-container">

@@ -7,17 +7,51 @@
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">
       <div class="header-links">
-        <div class="language-switcher" (click)="toggleLanguage()">
-          <img
-            class="language-switcher__icon"
-            [class.language-switcher__icon--animating]="isAnimating"
-            [src]="currentLanguageIcon"
-            [alt]="isGerman ? 'Deutsch' : 'English'"
-          />
+        <div
+          class="language-switcher"
+          (click)="toggleLanguage()"
+          [class.animating]="isAnimating"
+        >
+          <div class="switch-container">
+            <div
+              class="switch-option"
+              [class.active]="currentLanguage === 'en'"
+            >
+              EN
+            </div>
+            <div
+              class="switch-option"
+              [class.active]="currentLanguage === 'de'"
+            >
+              DE
+            </div>
+            <div
+              class="slider"
+              [class.slide-right]="currentLanguage === 'de'"
+            ></div>
+          </div>
         </div>
-        <a class="header-link" href="#about">About me</a>
-        <a class="header-link" href="#skills">Skills</a>
-        <a class="header-link" href="#portfolio">Portfolio</a>
+        <a
+          class="header-link"
+          [class.active]="activeSection === 'about'"
+          href="#about"
+          (click)="scrollToSection('about', $event)"
+          >About me</a
+        >
+        <a
+          class="header-link"
+          [class.active]="activeSection === 'skills'"
+          href="#skills"
+          (click)="scrollToSection('skills', $event)"
+          >Skills</a
+        >
+        <a
+          class="header-link"
+          [class.active]="activeSection === 'portfolio'"
+          href="#portfolio"
+          (click)="scrollToSection('portfolio', $event)"
+          >Portfolio</a
+        >
       </div>
     </nav>
 
@@ -45,9 +79,22 @@
             [alt]="isGerman ? 'Deutsch' : 'English'"
           />
         </div>
-        <a class="mobile-link" href="#about" (click)="closeMenu()">About me</a>
-        <a class="mobile-link" href="#skills" (click)="closeMenu()">Skills</a>
-        <a class="mobile-link" href="#portfolio" (click)="closeMenu()"
+        <a
+          class="mobile-link"
+          href="#about"
+          (click)="scrollToSection('about', $event)"
+          >About me</a
+        >
+        <a
+          class="mobile-link"
+          href="#skills"
+          (click)="scrollToSection('skills', $event)"
+          >Skills</a
+        >
+        <a
+          class="mobile-link"
+          href="#portfolio"
+          (click)="scrollToSection('portfolio', $event)"
           >Portfolio</a
         >
       </div>

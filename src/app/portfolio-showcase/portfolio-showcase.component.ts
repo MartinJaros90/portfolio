@@ -48,7 +48,7 @@ export class PortfolioShowcaseComponent {
       technologies: 'HTML, CSS, Firebase, JavaScript',
       learning: 'OOP',
       image: '../../assets/img/pokedex.png',
-      github: 'https://github.com/Hawkating/elpolloloco',
+      github: 'https://github.com/MartinJaros90/Pokedex-API',
       test: 'https://jan-bruchwalski.developerakademie.net/info.html',
     },
     {
@@ -62,7 +62,7 @@ export class PortfolioShowcaseComponent {
       technologies: 'HTML, CSS, JavaScript',
       learning: 'OOP',
       image: '../../assets/img/sharkie.png',
-      github: 'https://github.com/Hawkating/elpolloloco',
+      github: 'https://github.com/MartinJaros90/sharkie',
       test: 'https://jan-bruchwalski.developerakademie.net/El%20Pollo%20Loco/index.html',
     },
     {
@@ -76,7 +76,7 @@ export class PortfolioShowcaseComponent {
       technologies: 'HTML, CSS, JavaScript, Firebase',
       learning: 'a lot',
       image: '../../assets/img/join.png',
-      github: 'https://github.com/SebastianRegending/join.git',
+      github: 'https://github.com/MartinJaros90/join',
       test: 'https://join-327.developerakademie.net/login.html',
     },
   ];
