@@ -62,11 +62,11 @@
 @include mobile {
     .hero {
         >h2 {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         >h1 {
-            font-size: 42px;
+            font-size: 48px;
         }
     }
 
@@ -83,6 +83,7 @@
     .vertical-line {
         &.left {
             left: 16px;
+            height: 200px;
         }
 
         &.right {

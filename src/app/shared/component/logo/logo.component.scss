@@ -1,6 +1,11 @@
 @import '../../../../variables';
 
 
+
+
+
+
+
 .logo-container {
     @include center-flex;
 }
@@ -14,7 +19,7 @@
     margin: 0 6px;
     display: inline-block;
     transform: rotate(-20deg);
-    transition: transform 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: rgba(61, 207, 182, 0.2);
     padding: 8px 16px;
     border-radius: 10px;
@@ -22,20 +27,14 @@
     cursor: default;
 
     &:hover {
-        transform: rotate(0deg);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        transform: rotate(0deg) scale(1.1);
+        background-color: rgba(61, 207, 182, 0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    &::before {
-        content: '<';
-        margin-right: 5px;
-        font-weight: 200;
-    }
-
+    &::before,
     &::after {
-        content: '>';
-        margin-left: 5px;
-        font-weight: 200;
+        content: none;
     }
 }
 
@@ -47,10 +46,18 @@
     .first-name,
     .last-name {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 18px;
         color: $text-color;
         text-align: center;
         margin: 0;
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: default;
+        
+        &:hover {
+            color: $primary-color-light;
+            transform: translateX(5px);
+        }
     }
 }
 
@@ -61,4 +68,26 @@
             display: none;
         }
     }
+}
+
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.code-tag {
+    color: $primary-color-light;
+    opacity: 0.7;
+    font-family: 'Consolas', monospace;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 12px;
+    color: $primary-color-light;
+    opacity: 0.8;
+    margin-top: 4px;
+    font-weight: normal;
 }

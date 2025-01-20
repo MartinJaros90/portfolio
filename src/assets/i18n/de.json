@@ -104,5 +104,90 @@
       "EMAIL": "E-Mail",
       "LEGAL": "Impressum"
     }
+  },
+  "LEGAL": {
+    "BACK_TO_HOME": "Zurück zur Startseite",
+    "LEGAL_NOTICE": {
+      "TITLE": "Impressum",
+      "SECTIONS": {
+        "RESPONSIBLE": {
+          "TITLE": "Verantwortliche Instanz",
+          "CONTENT": "Martin Jaros\nWitenwisstrasse 23a\n9200 Gossau SG\nSchweiz\n\nE-Mail: martinjaros88@gmail.com"
+        },
+        "DISCLAIMER": {
+          "TITLE": "Haftungsausschluss",
+          "CONTENT": "Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.\n\nHaftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, die aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.\n\nAlle Angebote sind freibleibend. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen."
+        },
+        "LINKS": {
+          "TITLE": "Haftungsausschluss für Inhalte und Links",
+          "CONTENT": "Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des jeweiligen Nutzers."
+        },
+        "COPYRIGHT": {
+          "TITLE": "Urheberrechtserklärung",
+          "CONTENT": "Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Website, gehören ausschliesslich Martin Jaros oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Voraus einzuholen."
+        }
+      }
+    },
+    "PRIVACY_POLICY": {
+      "TITLE": "Datenschutzerklärung",
+      "LAST_UPDATED": "Zuletzt aktualisiert am:",
+      "INTRO": "Wir legen grossen Wert darauf, dass der Umgang mit Personendaten transparent ist. Diese Datenschutzerklärung gibt Auskunft darüber, welche personenbezogenen Daten wir sammeln, zu welchem Zweck und an wen wir sie weitergeben.",
+      "SECTIONS": {
+        "SERVICES": {
+          "TITLE": "1. Welche Dienste wir nutzen",
+          "CONTENT": "• Firebase"
+        },
+        "CONTACT": {
+          "TITLE": "2. Kontaktinformationen",
+          "CONTENT": "Bei Fragen oder Anliegen zum Schutz Ihrer Daten erreichen Sie uns jederzeit per E-Mail. Verantwortlich für die Datenbearbeitungen, die über diese Website erfolgen, ist:\n\nMartin Jaros\nWitenwisstrasse 23a\n9200 Gossau SG\nSchweiz\n\nDatenschutzverantwortliche Person:\nMartin Jaros\n\nE-Mail: martinjaros88@gmail.com"
+        },
+        "PRINCIPLES": {
+          "TITLE": "3. Allgemeine Grundsätze",
+          "SUBSECTIONS": {
+            "DATA_COLLECTION": {
+              "TITLE": "3.1 Welche Daten sammeln wir von Ihnen",
+              "CONTENT": "In erster Linie bearbeiten wir Personendaten, die Sie uns übermitteln oder die wir beim Betrieb unserer Website sammeln. Unter Umständen erhalten wir Personendaten über Sie auch von Dritten. Das können folgende Kategorien sein:\n\n• Personenstammdaten (Name, Adresse, Geburtsdaten, etc.)\n• Kontaktdaten (Handynummer, E-Mailadresse, etc.)\n• Onlinekennungen (bspw. Cookie-Kennung, IP-Adressen)\n• Standort- und Verkehrsdaten"
+            },
+            "PROCESSING": {
+              "TITLE": "3.2 Unter welchen Voraussetzungen bearbeiten wir Ihre Daten?",
+              "CONTENT": "Wir behandeln Ihre Daten vertraulich und gemäss den in dieser Datenschutzerklärung festgelegten Zwecken. Wir achten dabei auf eine transparente und verhältnismässige Bearbeitung.\n\nFalls wir ausnahmsweise nicht in der Lage sind, diese Grundsätze zu befolgen, kann die Datenbearbeitung trotzdem rechtmässig sein, weil ein Rechtfertigungsgrund vorliegt. Als Rechtfertigungsgrund kommt namentlich in Frage:\n\n• Ihre Einwilligung\n• die Durchführung eines Vertrages oder vorvertraglicher Massnahmen\n• unsere berechtigten Interessen, sofern Ihre Interessen nicht überwiegen"
+            },
+            "CONSENT": {
+              "TITLE": "3.3 Wie können Sie Ihre Einwilligung widerrufen?",
+              "CONTENT": "Haben Sie uns eine Einwilligung zur Bearbeitung Ihrer personenbezogenen Daten für bestimmte Zwecke erteilt, bearbeiten wir Ihre Daten im Rahmen dieser Einwilligung, soweit wir keinen anderen Rechtfertigungsgrund haben.\n\nSie haben jederzeit die Möglichkeit, Ihre Einwilligung zu widerrufen indem Sie eine E-Mail an die im Impressum genannte Adresse schicken. Bereits erfolgte Datenverarbeitungen sind davon nicht betroffen."
+            },
+            "RETENTION": {
+              "TITLE": "3.4 Wie lange bewahren wir Ihre Daten auf?",
+              "CONTENT": "Wir speichern personenbezogene Daten nur so lange, wie dies erforderlich ist, um die einzelnen Zwecke, zu denen die Daten erhoben wurden, zu erfüllen.\n\nDaten, die wir bei Ihrem Besuch auf unserer Website speichern, werden während zwölf Monaten aufbewahrt. Eine Ausnahme gilt für Analyse- und Trackingdaten, die länger aufbewahrt werden können."
+            },
+            "SECURITY": {
+              "TITLE": "3.5 Wie schützen wir Ihre Daten?",
+              "CONTENT": "Wir werden Ihre Daten sicher aufbewahren und alle angemessenen Massnahmen ergreifen, um Ihre Daten vor Verlust, Zugriff, Missbrauch oder Änderungen zu schützen.\n\nInnerhalb unserer Webseite verwenden wir das SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird."
+            }
+          }
+        },
+        "PROCESSING_DETAILS": {
+          "TITLE": "4. Einzelne Datenverarbeitungsvorgänge",
+          "SUBSECTIONS": {
+            "WEBSITE": {
+              "TITLE": "4.1 Bereitstellen der Webseite und Erstellung von Logfiles",
+              "SUBTITLE": "Welche Informationen erhalten wir und wie nutzen wir sie?",
+              "CONTENT": "Beim Besuch von martin-jaros.ch werden auf unseren Servern bestimmte Daten automatisch zu Zwecken der Systemadministration, für statistische oder für Sicherungszwecke gespeichert. Es handelt sich dabei um:\n\n• den Namen Ihres Internetserviceproviders\n• Ihre IP-Adresse (unter Umständen)\n• die Version Ihrer Browser-Software\n• das Betriebssystem des Rechners mit dem auf die URL zugegriffen wird\n• das Datum und die Uhrzeit des Zugriffs\n• die Webseite, von der aus Sie URL besuchen\n• die Suchwörter die Sie benutzt haben, um die URL finden"
+            },
+            "FIREBASE": {
+              "TITLE": "4.2 Firebase",
+              "CONTENT": "Unsere Website und Anwendungen nutzen Firebase, eine Plattform für Entwickler, die von Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; \"Google\") bereitgestellt wird. Firebase bietet eine Vielzahl von Tools und Diensten zur Entwicklung, Verwaltung und Verbesserung von Web- und Mobilanwendungen.\n\nDurch die Nutzung von Firebase können verschiedene Daten, einschliesslich Ihrer IP-Adresse, Informationen über den von Ihnen genutzten Browser, Datum und Uhrzeit des Zugriffs sowie weitere Interaktionsdaten, an Server von Google übermittelt und dort gespeichert werden.\n\nEinige der spezifischen Dienste von Firebase, die wir nutzen, sind:\n\n• Firebase Realtime Database: Ein Cloud-gehosteter NoSQL-Datenbankdienst\n• Firebase Analytics: Ein Analysetool zur Erfassung von Daten über die Nutzung und das Verhalten der Anwender in der App\n• Firebase Authentication: Ein Dienst, der Authentifizierungsfunktionen für unsere Anwendungen bereitstellt\n• Firebase Cloud Messaging: Ein Dienst für Benachrichtigungen und Nachrichtenübermittlung"
+            }
+          }
+        }
+      },
+      "SOURCE": {
+        "TEXT": "Quelle:",
+        "LINK": {
+          "TEXT": "BrainBox Solutions",
+          "URL": "https://brainbox.swiss/"
+        }
+      }
+    }
   }
 }

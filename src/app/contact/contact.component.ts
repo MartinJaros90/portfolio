@@ -3,11 +3,18 @@ import { FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollAnimationDirective } from '../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, TranslateModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+    TranslateModule,
+    ScrollAnimationDirective,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

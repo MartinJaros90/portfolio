@@ -104,5 +104,90 @@
       "EMAIL": "Email",
       "LEGAL": "Legal Notice"
     }
+  },
+  "LEGAL": {
+    "BACK_TO_HOME": "Back to Homepage",
+    "LEGAL_NOTICE": {
+      "TITLE": "Legal Notice",
+      "SECTIONS": {
+        "RESPONSIBLE": {
+          "TITLE": "Responsible Entity",
+          "CONTENT": "Martin Jaros\nWitenwisstrasse 23a\n9200 Gossau SG\nSwitzerland\n\nEmail: martinjaros88@gmail.com"
+        },
+        "DISCLAIMER": {
+          "TITLE": "Disclaimer",
+          "CONTENT": "The author assumes no liability for the correctness, accuracy, timeliness, reliability and completeness of the information.\n\nLiability claims against the author for material or immaterial damages resulting from access to or use of or non-use of published information, misuse of the connection or technical failures are excluded.\n\nAll offers are non-binding. The author expressly reserves the right to change, supplement or delete parts of the pages or the entire offer without separate announcement or to discontinue the publication temporarily or permanently."
+        },
+        "LINKS": {
+          "TITLE": "Disclaimer for Contents and Links",
+          "CONTENT": "References and links to third party websites are outside our area of responsibility. Any responsibility for such websites is declined. The access and use of such websites is at the user's own risk."
+        },
+        "COPYRIGHT": {
+          "TITLE": "Copyright Declaration",
+          "CONTENT": "The copyright and all other rights to content, images, photos or other files on this website belong exclusively to Martin Jaros or the specifically named rights holders. Written consent must be obtained in advance from the copyright holder for the reproduction of any elements."
+        }
+      }
+    },
+    "PRIVACY_POLICY": {
+      "TITLE": "Privacy Policy",
+      "LAST_UPDATED": "Last updated:",
+      "INTRO": "We value transparency in handling personal data. This privacy policy provides information about what personal data we collect, for what purpose, and to whom we disclose it.",
+      "SECTIONS": {
+        "SERVICES": {
+          "TITLE": "1. Services We Use",
+          "CONTENT": "• Firebase"
+        },
+        "CONTACT": {
+          "TITLE": "2. Contact Information",
+          "CONTENT": "For questions or concerns about the protection of your data, you can reach us at any time via email. Responsible for data processing through this website is:\n\nMartin Jaros\nWitenwisstrasse 23a\n9200 Gossau SG\nSwitzerland\n\nData Protection Officer:\nMartin Jaros\n\nEmail: martinjaros88@gmail.com"
+        },
+        "PRINCIPLES": {
+          "TITLE": "3. General Principles",
+          "SUBSECTIONS": {
+            "DATA_COLLECTION": {
+              "TITLE": "3.1 What Data We Collect",
+              "CONTENT": "We primarily process personal data that you submit to us or that we collect during the operation of our website. In some circumstances, we may also receive personal data about you from third parties. This may include the following categories:\n\n• Personal master data (name, address, date of birth, etc.)\n• Contact details (mobile number, email address, etc.)\n• Online identifiers (e.g., cookie ID, IP addresses)\n• Location and traffic data"
+            },
+            "PROCESSING": {
+              "TITLE": "3.2 Under What Conditions Do We Process Your Data?",
+              "CONTENT": "We treat your data confidentially and in accordance with the purposes set out in this privacy policy. We ensure transparent and proportionate processing.\n\nIf we are exceptionally unable to follow these principles, data processing may still be lawful because there is a justification. Justification may include:\n\n• Your consent\n• The execution of a contract or pre-contractual measures\n• Our legitimate interests, provided your interests do not prevail"
+            },
+            "CONSENT": {
+              "TITLE": "3.3 How Can You Withdraw Your Consent?",
+              "CONTENT": "If you have given us consent to process your personal data for specific purposes, we will process your data within the scope of this consent, unless we have another legal justification.\n\nYou have the option to withdraw your consent at any time by sending an email to the address specified in the legal notice. Data processing that has already taken place is not affected by this."
+            },
+            "RETENTION": {
+              "TITLE": "3.4 How Long Do We Keep Your Data?",
+              "CONTENT": "We store personal data only for as long as necessary to fulfill the individual purposes for which the data was collected.\n\nData that we store during your visit to our website is kept for twelve months. An exception applies to analysis and tracking data, which may be retained longer."
+            },
+            "SECURITY": {
+              "TITLE": "3.5 How Do We Protect Your Data?",
+              "CONTENT": "We will keep your data secure and take all reasonable measures to protect your data from loss, access, misuse, or alterations.\n\nWithin our website, we use SSL (Secure Socket Layer) in conjunction with the highest level of encryption supported by your browser."
+            }
+          }
+        },
+        "PROCESSING_DETAILS": {
+          "TITLE": "4. Individual Data Processing Operations",
+          "SUBSECTIONS": {
+            "WEBSITE": {
+              "TITLE": "4.1 Website Provision and Log Files",
+              "SUBTITLE": "What Information Do We Receive and How Do We Use It?",
+              "CONTENT": "When visiting martin-jaros.ch, certain data is automatically stored on our servers for system administration, statistical, or security purposes. This includes:\n\n• Your Internet service provider's name\n• Your IP address (under certain circumstances)\n• Your browser software version\n• The operating system of the computer accessing the URL\n• The date and time of access\n• The website from which you visit the URL\n• The search terms you used to find the URL"
+            },
+            "FIREBASE": {
+              "TITLE": "4.2 Firebase",
+              "CONTENT": "Our website and applications use Firebase, a developer platform provided by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; \"Google\"). Firebase offers a variety of tools and services for developing, managing, and improving web and mobile applications.\n\nThrough the use of Firebase, various data, including your IP address, information about your browser, date and time of access, and other interaction data, may be transmitted to and stored on Google servers.\n\nSome of the specific Firebase services we use include:\n\n• Firebase Realtime Database: A cloud-hosted NoSQL database service\n• Firebase Analytics: An analytics tool for collecting data about app usage and user behavior\n• Firebase Authentication: A service that provides authentication functions for our applications\n• Firebase Cloud Messaging: A service for notifications and message delivery"
+            }
+          }
+        }
+      },
+      "SOURCE": {
+        "TEXT": "Source:",
+        "LINK": {
+          "TEXT": "BrainBox Solutions",
+          "URL": "https://brainbox.swiss/"
+        }
+      }
+    }
   }
 }

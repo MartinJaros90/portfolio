@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollAnimationDirective } from '../shared/directives/scroll-animation.directive';
 
 type TechType = 'HTML' | 'CSS' | 'JavaScript' | 'Firebase' | 'Angular';
 
@@ -21,7 +22,7 @@ interface Card {
 @Component({
   selector: 'app-portfolio-showcase',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, ScrollAnimationDirective],
   templateUrl: './portfolio-showcase.component.html',
   styleUrl: './portfolio-showcase.component.scss',
 })

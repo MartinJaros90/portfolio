@@ -1,7 +1,7 @@
 <section id="skills">
   <div class="content-wrapper">
     <div class="skills-container">
-      <div class="left">
+      <div class="left" appScrollAnimation>
         <div class="skill-set-content">
           <h3>{{ "SKILLS.SUBTITLE" | translate }}</h3>
           <div class="skill-set-header">
@@ -33,63 +33,26 @@
       </div>
 
       <div class="right">
-        <div class="skill-item">
-          <img src="../../../assets/icons/html.png" alt="HTML" />
-          <span>HTML</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/css.png" alt="CSS" />
-          <span>CSS</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/javascript.png" alt="JavaScript" />
-          <span>JavaScript</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/typescript.png" alt="TypeScript" />
-          <span>TypeScript</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/angular.png" alt="Angular" />
-          <span>Angular</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/firebase.png" alt="Firebase" />
-          <span>Firebase</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/api.png" alt="REST API" />
-          <span>REST API</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/scrum.png" alt="SCRUM" />
-          <span>SCRUM</span>
-        </div>
-
-        <div class="skill-item">
-          <img src="../../../assets/icons/git.png" alt="GIT" />
-          <span>GIT</span>
-        </div>
-
-        <div class="skill-item mindset-container">
-          <img
-            src="../../../assets/icons/growth-mindset.png"
-            alt="Growth mindset"
-          />
-          <img
-            class="mindset-frame"
-            src="../../../assets/icons/mindset-frame.png"
-            alt=""
-          />
-          <span>Growth mindset</span>
-        </div>
+        <ng-container *ngFor="let skill of skills; let i = index">
+          <div
+            class="skill-item"
+            [class.mindset-container]="skill.isSpecial"
+            appScrollAnimation
+            [style.animation-delay]="i * 0.1 + 's'"
+          >
+            <img
+              [src]="'../../../assets/icons/' + skill.icon"
+              [alt]="skill.name"
+            />
+            <img
+              *ngIf="skill.isSpecial"
+              class="mindset-frame"
+              src="../../../assets/icons/mindset-frame.png"
+              alt=""
+            />
+            <span>{{ skill.name }}</span>
+          </div>
+        </ng-container>
       </div>
     </div>
   </div>

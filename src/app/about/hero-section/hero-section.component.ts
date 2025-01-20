@@ -1,24 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+import { ScrollAnimationDirective } from '../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [CommonModule, TranslateModule, ScrollAnimationDirective],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements OnInit {
   email: string = 'martinjaros88@gmail.com';
   githubUrl: string = 'https://github.com/MartinJaros90';
+  isLoaded = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 300);
+  }
 
   scrollToSection(sectionId: string, event: Event) {
     event.preventDefault();
-    let element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId);
     if (element) {
-      let headerOffset = 100;
-      let elementPosition = element.getBoundingClientRect().top;
-      let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,

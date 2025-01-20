@@ -1,6 +1,6 @@
 <section id="portfolio">
   <div class="portfolio-wrapper">
-    <div class="featured-projects-container">
+    <div class="featured-projects-container" appScrollAnimation>
       <h3>{{ "PORTFOLIO.SUBTITLE" | translate }}</h3>
       <h2>{{ "PORTFOLIO.TITLE" | translate }}</h2>
       <span>{{ "PORTFOLIO.DESCRIPTION" | translate }}</span>
@@ -11,6 +11,8 @@
         class="portfolio-menu-item"
         data-project="pokedex"
         (click)="openDialog('Pokédex')"
+        appScrollAnimation
+        [style.animation-delay]="'0.1s'"
       >
         <span
           >Pokédex
@@ -27,6 +29,8 @@
         class="portfolio-menu-item"
         data-project="sharkie"
         (click)="openDialog('sharkie')"
+        appScrollAnimation
+        [style.animation-delay]="'0.2s'"
       >
         <span
           >Sharkie
@@ -42,6 +46,8 @@
         class="portfolio-menu-item last"
         data-project="join"
         (click)="openDialog('join')"
+        appScrollAnimation
+        [style.animation-delay]="'0.3s'"
       >
         <span
           >Join

@@ -1,75 +1,33 @@
 <div class="legal-container">
   <div class="content-wrapper">
     <div class="back-button">
-      <a [routerLink]="['/']" class="back-link" title="Zurück zur Startseite">
+      <a
+        [routerLink]="['/']"
+        class="back-link"
+        [title]="'LEGAL.BACK_TO_HOME' | translate"
+      >
         ←
       </a>
     </div>
 
-    <h1>Impressum</h1>
+    <h1>{{ "LEGAL.LEGAL_NOTICE.TITLE" | translate }}</h1>
 
-    <div class="legal-section">
-      <h2>Verantwortliche Instanz</h2>
-      <p>
-        Martin Jaros<br />
-        Witenwisstrasse 23a<br />
-        9200 Gossau SG<br />
-        Schweiz
-      </p>
-      <p><strong>E-Mail</strong>:</p>
-      <p>E-Mail: martinjaros88&#64;gmail.com</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Haftungsausschluss</h2>
-      <p>
-        Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit,
-        Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.
-      </p>
-      <p>
-        Haftungsansprüche gegen den Autor wegen Schäden materieller oder
-        immaterieller Art, die aus dem Zugriff oder der Nutzung bzw.
-        Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der
-        Verbindung oder durch technische Störungen entstanden sind, werden
-        ausgeschlossen.
-      </p>
-      <p>
-        Alle Angebote sind freibleibend. Der Autor behält es sich ausdrücklich
-        vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte
-        Ankündigung zu verändern, zu ergänzen, zu löschen oder die
-        Veröffentlichung zeitweise oder endgültig einzustellen.
-      </p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Haftungsausschluss für Inhalte und Links</h2>
-      <p>
-        Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres
-        Verantwortungsbereichs. Es wird jegliche Verantwortung für solche
-        Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten
-        erfolgen auf eigene Gefahr des jeweiligen Nutzers.
-      </p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Urheberrechtserklärung</h2>
-      <p>
-        Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder
-        anderen Dateien auf dieser Website, gehören ausschliesslich Martin Jaros
-        oder den speziell genannten Rechteinhabern. Für die Reproduktion
-        jeglicher Elemente ist die schriftliche Zustimmung des
-        Urheberrechtsträgers im Voraus einzuholen.
-      </p>
-    </div>
-
-    <div class="legal-section source">
-      <h2>Quelle</h2>
-      <a
-        href="https://brainbox.swiss/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >BrainBox Solutions</a
-      >
+    <div
+      class="legal-section"
+      *ngFor="
+        let section of ['RESPONSIBLE', 'DISCLAIMER', 'LINKS', 'COPYRIGHT']
+      "
+    >
+      <h2>
+        {{ "LEGAL.LEGAL_NOTICE.SECTIONS." + section + ".TITLE" | translate }}
+      </h2>
+      <p
+        [innerHTML]="
+          'LEGAL.LEGAL_NOTICE.SECTIONS.' + section + '.CONTENT'
+            | translate
+            | nl2br
+        "
+      ></p>
     </div>
   </div>
 </div>

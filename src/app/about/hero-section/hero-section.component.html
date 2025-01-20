@@ -1,5 +1,5 @@
 <section class="hero-container">
-  <div class="content-wrapper">
+  <div class="content-wrapper" [class.loaded]="isLoaded">
     <div class="vertical-line left">
       <div class="animated-arrow">
         <svg
@@ -26,11 +26,11 @@
     </div>
 
     <div class="hero">
-      <h2>{{ "HERO.TITLE" | translate }}</h2>
-      <h1>{{ "HERO.NAME" | translate }}</h1>
+      <h2 class="fade-in-up">{{ "HERO.TITLE" | translate }}</h2>
+      <h1 class="fade-in-up delay-1">{{ "HERO.NAME" | translate }}</h1>
     </div>
 
-    <aside>
+    <aside class="fade-in-right">
       <address>
         <a [href]="'mailto:' + email">{{ email }}</a>
       </address>
@@ -79,9 +79,9 @@
       </div>
     </aside>
 
-    <div class="vertical-line right"></div>
+    <div class="vertical-line right fade-in-left"></div>
 
-    <div class="buttons hover-effect">
+    <div class="buttons hover-effect fade-in-up delay-2">
       <a href="#portfolio" (click)="scrollToSection('portfolio', $event)">
         <span>{{ "HERO.BUTTONS.CHECK_WORK" | translate }}</span>
       </a>
@@ -90,7 +90,7 @@
       </a>
     </div>
 
-    <div class="marquee-container">
+    <div class="marquee-container fade-in-up delay-3">
       <div class="marquee-content">
         <span>{{ "HERO.MARQUEE.REMOTE" | translate }}</span>
         <span class="dot">•</span>

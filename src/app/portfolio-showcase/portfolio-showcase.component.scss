@@ -154,6 +154,17 @@ section {
         font-weight: 400;
         padding-right: 24px;
     }
+
+    &.scroll-hidden {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    &.scroll-show {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .separator {
@@ -425,5 +436,17 @@ section {
 }
 }
 
+.featured-projects-container {
+    &.scroll-hidden {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    &.scroll-show {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
 
 @import './portfolio-showcase.responsive.scss';
