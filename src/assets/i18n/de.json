@@ -81,9 +81,9 @@
         "MESSAGE": "Bitte geben Sie eine Nachricht ein."
       },
       "SUCCESS_TITLE": "Nachricht erfolgreich gesendet!",
-      "SUCCESS_MESSAGE": "Vielen Dank für deine Nachricht. Ich werde mich so schnell wie möglich bei dir melden.",
+      "SUCCESS_MESSAGE": "Vielen Dank für Ihre Nachricht. Ich werde mich so schnell wie möglich bei Ihnen melden.",
       "ERROR_TITLE": "Ups, etwas ist schiefgelaufen!",
-      "ERROR_MESSAGE": "Bitte versuche es später noch einmal oder kontaktiere mich direkt per E-Mail.",
+      "ERROR_MESSAGE": "Bitte versuchen Sie es später noch einmal oder kontaktieren Sie mich direkt per E-Mail.",
       "SENDING": "Wird gesendet..."
     }
   },
