@@ -27,7 +27,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/img",
+                "output": "/assets/img"
+              }
             ],
             "styles": [
               "src/styles.scss",
@@ -38,7 +43,19 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "12kb",
+                "maximumError": "15kb"
+              }
+            ]
           },
           "configurations": {
             "production": {

@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactService {
-  // Produktions-URL
-  private apiUrl = 'https://martin-jaros.developerakademie.net/sendMail.php';
+  private apiUrl = 'http://martin-jaros.ch/assets/api/sendMail.php';
 
   constructor(private http: HttpClient) {}
 

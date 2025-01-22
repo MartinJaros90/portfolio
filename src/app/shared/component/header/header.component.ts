@@ -1,8 +1,8 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { LogoComponent } from '../logo/logo.component';
-import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -17,17 +17,21 @@ export class HeaderComponent implements OnInit {
   isScrolled = false;
   isHeaderVisible = true;
   lastScrollTop = 0;
-  isGerman = false;
   isAnimating = false;
+  currentLanguage: 'de' | 'en' = 'en';
   currentLanguageIcon = '../../../../assets/icons/en-active.png';
-  currentLanguage: 'de' | 'en';
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private translate: TranslateService
+    private languageService: LanguageService
   ) {
-    const initialLang = this.translate.currentLang || 'en';
-    this.currentLanguage = initialLang as 'de' | 'en';
+    this.languageService.currentLang$.subscribe((lang) => {
+      this.currentLanguage = lang as 'de' | 'en';
+      this.currentLanguageIcon =
+        lang === 'en'
+          ? '../../../../assets/icons/en-active.png'
+          : '../../../../assets/icons/de-active.png';
+    });
   }
 
   ngOnInit() {
@@ -58,12 +62,8 @@ export class HeaderComponent implements OnInit {
     if (this.isAnimating) return;
 
     this.isAnimating = true;
-    this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
-    this.translate.use(this.currentLanguage);
-    this.currentLanguageIcon =
-      this.currentLanguage === 'en'
-        ? '../../../../assets/icons/en-active.png'
-        : '../../../../assets/icons/de-active.png';
+    const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.languageService.switchLanguage(newLang);
 
     setTimeout(() => {
       this.isAnimating = false;
