@@ -42,6 +42,7 @@ export class ContactComponent {
   isSubmitting = false;
   submitSuccess = false;
   submitError = false;
+  showSuccessMessage = false;
 
   constructor(private contactService: ContactService) {}
 
@@ -67,7 +68,12 @@ export class ContactComponent {
           .sendMessage(formData)
           .toPromise();
         this.submitSuccess = true;
+        this.showSuccessMessage = true;
         this.contactForm.reset();
+
+        setTimeout(() => {
+          this.showSuccessMessage = false;
+        }, 5000);
       } catch (error) {
         console.error('Fehler beim Senden:', error);
         this.submitError = true;

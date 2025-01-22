@@ -79,7 +79,12 @@
         "NAME": "Please enter your name.",
         "EMAIL": "Please enter your email address.",
         "MESSAGE": "Please enter a message."
-      }
+      },
+      "SUCCESS_TITLE": "Message sent successfully!",
+      "SUCCESS_MESSAGE": "Thank you for your message. I will get back to you as soon as possible.",
+      "ERROR_TITLE": "Oops, something went wrong!",
+      "ERROR_MESSAGE": "Please try again later or contact me directly via email.",
+      "SENDING": "Sending..."
     }
   },
   "PORTFOLIO": {

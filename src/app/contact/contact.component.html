@@ -119,12 +119,21 @@
           </div>
 
           <div class="submit-status" *ngIf="submitSuccess || submitError">
-            <p class="success" *ngIf="submitSuccess">
-              {{ "CONTACT.FORM.SUCCESS" | translate }}
-            </p>
-            <p class="error" *ngIf="submitError">
-              {{ "CONTACT.FORM.ERROR" | translate }}
-            </p>
+            <div class="success-message" *ngIf="submitSuccess">
+              <i class="fas fa-check-circle"></i>
+              <div class="message-content">
+                <h4>{{ "CONTACT.FORM.SUCCESS_TITLE" | translate }}</h4>
+                <p>{{ "CONTACT.FORM.SUCCESS_MESSAGE" | translate }}</p>
+              </div>
+            </div>
+
+            <div class="error-message" *ngIf="submitError">
+              <i class="fas fa-exclamation-circle"></i>
+              <div class="message-content">
+                <h4>{{ "CONTACT.FORM.ERROR_TITLE" | translate }}</h4>
+                <p>{{ "CONTACT.FORM.ERROR_MESSAGE" | translate }}</p>
+              </div>
+            </div>
           </div>
 
           <button type="submit" [disabled]="!isFormValid() || isSubmitting">

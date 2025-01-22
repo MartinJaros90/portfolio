@@ -79,7 +79,12 @@
         "NAME": "Bitte geben Sie Ihren Namen ein.",
         "EMAIL": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
         "MESSAGE": "Bitte geben Sie eine Nachricht ein."
-      }
+      },
+      "SUCCESS_TITLE": "Nachricht erfolgreich gesendet!",
+      "SUCCESS_MESSAGE": "Vielen Dank für deine Nachricht. Ich werde mich so schnell wie möglich bei dir melden.",
+      "ERROR_TITLE": "Ups, etwas ist schiefgelaufen!",
+      "ERROR_MESSAGE": "Bitte versuche es später noch einmal oder kontaktiere mich direkt per E-Mail.",
+      "SENDING": "Wird gesendet..."
     }
   },
   "PORTFOLIO": {
