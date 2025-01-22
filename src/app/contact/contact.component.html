@@ -27,7 +27,11 @@
         appScrollAnimation
         [style.animation-delay]="'0.2s'"
       >
-        <form class="contact-form">
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+          class="contact-form"
+        >
           <div class="form-group">
             <label for="name">{{
               "CONTACT.FORM.NAME.LABEL" | translate
@@ -35,13 +39,19 @@
             <input
               type="text"
               id="name"
+              formControlName="name"
               [placeholder]="'CONTACT.FORM.NAME.PLACEHOLDER' | translate"
-              [formControl]="nameControl"
-              [class.error]="nameControl.invalid && nameControl.touched"
+              [class.error]="
+                contactForm.get('name')?.invalid &&
+                contactForm.get('name')?.touched
+              "
             />
             <span
               class="error-message"
-              *ngIf="nameControl.invalid && nameControl.touched"
+              *ngIf="
+                contactForm.get('name')?.invalid &&
+                contactForm.get('name')?.touched
+              "
             >
               {{ "CONTACT.FORM.ERRORS.NAME" | translate }}
             </span>
@@ -54,13 +64,19 @@
             <input
               type="email"
               id="email"
+              formControlName="email"
               [placeholder]="'CONTACT.FORM.EMAIL.PLACEHOLDER' | translate"
-              [formControl]="emailControl"
-              [class.error]="emailControl.invalid && emailControl.touched"
+              [class.error]="
+                contactForm.get('email')?.invalid &&
+                contactForm.get('email')?.touched
+              "
             />
             <span
               class="error-message"
-              *ngIf="emailControl.invalid && emailControl.touched"
+              *ngIf="
+                contactForm.get('email')?.invalid &&
+                contactForm.get('email')?.touched
+              "
             >
               {{ "CONTACT.FORM.ERRORS.EMAIL" | translate }}
             </span>
@@ -73,24 +89,26 @@
             <textarea
               id="message"
               rows="4"
+              formControlName="message"
               [placeholder]="'CONTACT.FORM.MESSAGE.PLACEHOLDER' | translate"
-              [formControl]="messageControl"
-              [class.error]="messageControl.invalid && messageControl.touched"
+              [class.error]="
+                contactForm.get('message')?.invalid &&
+                contactForm.get('message')?.touched
+              "
             ></textarea>
             <span
               class="error-message"
-              *ngIf="messageControl.invalid && messageControl.touched"
+              *ngIf="
+                contactForm.get('message')?.invalid &&
+                contactForm.get('message')?.touched
+              "
             >
               {{ "CONTACT.FORM.ERRORS.MESSAGE" | translate }}
             </span>
           </div>
 
           <div class="form-group checkbox">
-            <input
-              type="checkbox"
-              id="privacy"
-              [formControl]="privacyControl"
-            />
+            <input type="checkbox" id="privacy" formControlName="privacy" />
             <label for="privacy">
               {{ "CONTACT.FORM.PRIVACY" | translate }}
               <a href="/privacy-policy">{{
@@ -100,8 +118,21 @@
             </label>
           </div>
 
-          <button type="submit" [disabled]="!isFormValid()">
-            {{ "CONTACT.FORM.SUBMIT" | translate }}
+          <div class="submit-status" *ngIf="submitSuccess || submitError">
+            <p class="success" *ngIf="submitSuccess">
+              {{ "CONTACT.FORM.SUCCESS" | translate }}
+            </p>
+            <p class="error" *ngIf="submitError">
+              {{ "CONTACT.FORM.ERROR" | translate }}
+            </p>
+          </div>
+
+          <button type="submit" [disabled]="!isFormValid() || isSubmitting">
+            {{
+              isSubmitting
+                ? "CONTACT.FORM.SENDING"
+                : ("CONTACT.FORM.SUBMIT" | translate)
+            }}
           </button>
         </form>
       </div>

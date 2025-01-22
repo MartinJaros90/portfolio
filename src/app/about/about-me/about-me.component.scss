@@ -38,6 +38,14 @@ section {
         height: auto;
         max-width: 480px;
         max-height: 480px;
+        object-fit: cover;
+        border-radius: 32px;
+        object-position: 50% 64%;
+        
+        filter: grayscale(85%) 
+                contrast(1.1) 
+                brightness(1.05) 
+                saturate(0.9); 
     }
 }
 
