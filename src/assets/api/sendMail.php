@@ -11,7 +11,7 @@ function logMessage($message) {
 }
 
 // CORS Headers für alle Anfragen
-header("Access-Control-Allow-Origin: http://martin-jaros.ch");
+header("Access-Control-Allow-Origin: https://martin-jaros.ch");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
