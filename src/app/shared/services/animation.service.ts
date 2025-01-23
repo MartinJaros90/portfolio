@@ -13,6 +13,34 @@ export class AnimationService {
     threshold: 0.3,
   };
 
+  scrollToSection(sectionId: string) {
+    if (isPlatformBrowser(this.platformId)) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const isMobile = window.innerWidth <= 768;
+        const isTablet = window.innerWidth <= 1024;
+
+        let offset = 120;
+        if (isMobile) {
+          offset = 80;
+        } else if (isTablet) {
+          offset = 100;
+        }
+
+        const headerHeight =
+          document.querySelector('header')?.offsetHeight || 0;
+        const sectionPosition = section.getBoundingClientRect().top;
+        const offsetPosition =
+          sectionPosition + window.pageYOffset - headerHeight - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }
+
   createIntersectionObserver(
     element: Element,
     callback: IntersectionObserverCallback
@@ -22,9 +50,6 @@ export class AnimationService {
       'IntersectionObserver' in window
     ) {
       return new IntersectionObserver(callback, this.observerOptions);
-    }
-    if (!isPlatformBrowser(this.platformId)) {
-      return null;
     }
     return null;
   }

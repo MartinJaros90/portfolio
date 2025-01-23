@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { LogoComponent } from '../logo/logo.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private router: Router
   ) {
     this.languageService.currentLang$.subscribe((lang) => {
       this.currentLanguage = lang as 'de' | 'en';
@@ -97,18 +99,43 @@ export class HeaderComponent implements OnInit {
   scrollToSection(sectionId: string, event: Event) {
     if (isPlatformBrowser(this.platformId)) {
       event.preventDefault();
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const headerOffset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
+      const isLegalPage =
+        this.router.url.includes('legal-notice') ||
+        this.router.url.includes('privacy-policy');
+
+      if (isLegalPage) {
+        this.router.navigate(['/']).then(() => {
+          setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+              const headerOffset = 100;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+              });
+            }
+          }, 100);
         });
+      } else {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }
       }
+
       if (this.isMenuOpen) {
         this.toggleMenu();
       }

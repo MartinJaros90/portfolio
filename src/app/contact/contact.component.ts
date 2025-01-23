@@ -32,9 +32,15 @@ interface ContactForm {
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  private emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email,
+      Validators.pattern(this.emailPattern),
+    ]),
     message: new FormControl('', [Validators.required]),
     privacy: new FormControl(false, [Validators.requiredTrue]),
   });
@@ -43,6 +49,7 @@ export class ContactComponent {
   submitSuccess = false;
   submitError = false;
   showSuccessMessage = false;
+  showOverlayMessage = false;
 
   constructor(private contactService: ContactService, private router: Router) {}
 
@@ -69,14 +76,20 @@ export class ContactComponent {
           .toPromise();
         this.submitSuccess = true;
         this.showSuccessMessage = true;
-        this.contactForm.reset();
 
+        this.showOverlayMessage = true;
         setTimeout(() => {
-          this.showSuccessMessage = false;
-        }, 5000);
+          this.showOverlayMessage = false;
+        }, 2000);
+
+        this.contactForm.reset();
       } catch (error) {
         console.error('Fehler beim Senden:', error);
         this.submitError = true;
+        this.showOverlayMessage = true;
+        setTimeout(() => {
+          this.showOverlayMessage = false;
+        }, 2000);
       } finally {
         this.isSubmitting = false;
       }
@@ -84,7 +97,6 @@ export class ContactComponent {
   }
 
   navigateToPrivacyPolicy() {
-    // Speichere die aktuelle Scroll-Position
     const scrollPosition = window.pageYOffset;
     sessionStorage.setItem('scrollPosition', scrollPosition.toString());
     this.router.navigate(['/privacy-policy']);

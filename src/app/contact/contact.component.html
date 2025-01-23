@@ -144,6 +144,30 @@
             }}
           </button>
         </form>
+
+        <div
+          class="feedback-overlay"
+          *ngIf="showOverlayMessage"
+          [class.success]="submitSuccess"
+          [class.error]="submitError"
+        >
+          <div class="message-content">
+            <i
+              [class]="
+                submitSuccess
+                  ? 'fas fa-check-circle'
+                  : 'fas fa-exclamation-circle'
+              "
+            ></i>
+            <h4>
+              {{
+                submitSuccess
+                  ? ("CONTACT.FORM.SUCCESS_TITLE" | translate)
+                  : ("CONTACT.FORM.ERROR_TITLE" | translate)
+              }}
+            </h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>

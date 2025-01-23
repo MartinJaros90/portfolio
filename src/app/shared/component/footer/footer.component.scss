@@ -77,7 +77,35 @@ section {
 
         &:hover {
             color: $primary-color-light;
+            cursor: pointer;
         }
+
+        &--coming-soon {
+            color: $text-color;
+            opacity: 0.7;
+            cursor: default;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &:hover {
+                color: $text-color;
+                cursor: default;
+            }
+
+            &:hover::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    .coming-soon-badge {
+        font-size: 12px;
+        padding: 2px 6px;
+        background-color: rgba($primary-color-light, 0.1);
+        border: 1px solid $primary-color-light;
+        border-radius: 4px;
+        color: $primary-color-light;
     }
 }
 

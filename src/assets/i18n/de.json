@@ -106,6 +106,8 @@
     "LINKS": {
       "GITHUB": "GitHub",
       "LINKEDIN": "LinkedIn",
+      "LINKEDIN_COMING_SOON": "LinkedIn Profil in Bearbeitung",
+      "COMING_SOON": "In Arbeit",
       "EMAIL": "E-Mail",
       "LEGAL": "Impressum"
     }

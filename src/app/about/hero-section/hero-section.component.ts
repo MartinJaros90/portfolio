@@ -23,17 +23,34 @@ export class HeroSectionComponent implements OnInit {
 
   scrollToSection(sectionId: string, event: Event) {
     event.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+    const isMobile = window.innerWidth <= 375;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+    if (isMobile && sectionId === 'contact') {
+      const formElement = document.querySelector('.right-content');
+      if (formElement) {
+        const headerOffset = 20;
+        const elementPosition = formElement.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
     }
   }
 
