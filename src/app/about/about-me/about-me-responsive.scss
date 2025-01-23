@@ -197,3 +197,27 @@
         }
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .content-wrapper {
+        gap: 120px; // Fester Abstand für sehr große Bildschirme
+    }
+
+    .profile-image-container,
+    .about-me-content {
+        width: 45%; // Beibehaltung der Proportionen
+        max-width: 560px; // Maximale Breite begrenzt
+    }
+
+    .about-me-header {
+        padding: 32px;
+
+        h2 {
+            font-size: 56px;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    }
+}

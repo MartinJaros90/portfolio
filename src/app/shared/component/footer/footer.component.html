@@ -32,5 +32,23 @@
         "FOOTER.LINKS.LEGAL" | translate
       }}</a>
     </div>
+
+    <div class="scroll-top" (click)="scrollToTop()" [class.visible]="isVisible">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 4L16 28M16 4L8 12M16 4L24 12"
+          stroke="#3DCFB6"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
   </div>
 </section>
