@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -14,7 +14,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class FooterComponent {
   isVisible = false;
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private router: Router) {}
+
+  navigateToLegalNotice() {
+    const scrollPosition = window.pageYOffset;
+    sessionStorage.setItem('scrollPosition', scrollPosition.toString());
+    this.router.navigate(['/legal-notice']);
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

@@ -111,7 +111,7 @@
             <input type="checkbox" id="privacy" formControlName="privacy" />
             <label for="privacy">
               {{ "CONTACT.FORM.PRIVACY" | translate }}
-              <a href="/privacy-policy">{{
+              <a (click)="navigateToPrivacyPolicy()">{{
                 "CONTACT.FORM.PRIVACY_LINK" | translate
               }}</a>
               {{ "CONTACT.FORM.PRIVACY_END" | translate }}

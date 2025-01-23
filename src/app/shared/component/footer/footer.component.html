@@ -28,7 +28,7 @@
       <a href="mailto:martinjaros88@gmail.com" class="footer-links__item">{{
         "FOOTER.LINKS.EMAIL" | translate
       }}</a>
-      <a [routerLink]="['/legal-notice']" class="footer-links__item">{{
+      <a (click)="navigateToLegalNotice()" class="footer-links__item">{{
         "FOOTER.LINKS.LEGAL" | translate
       }}</a>
     </div>

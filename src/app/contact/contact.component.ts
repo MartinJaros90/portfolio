@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollAnimationDirective } from '../shared/directives/scroll-animation.directive';
 import { ContactService } from '../shared/services/contact.service';
@@ -44,7 +44,7 @@ export class ContactComponent {
   submitError = false;
   showSuccessMessage = false;
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService, private router: Router) {}
 
   isFormValid(): boolean {
     return this.contactForm.valid;
@@ -81,5 +81,12 @@ export class ContactComponent {
         this.isSubmitting = false;
       }
     }
+  }
+
+  navigateToPrivacyPolicy() {
+    // Speichere die aktuelle Scroll-Position
+    const scrollPosition = window.pageYOffset;
+    sessionStorage.setItem('scrollPosition', scrollPosition.toString());
+    this.router.navigate(['/privacy-policy']);
   }
 }
