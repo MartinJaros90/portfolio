@@ -200,13 +200,27 @@
 
 @media screen and (min-width: 2560px) {
     .content-wrapper {
-        gap: 120px; // Fester Abstand für sehr große Bildschirme
+        gap: 120px; 
     }
 
     .profile-image-container,
     .about-me-content {
-        width: 45%; // Beibehaltung der Proportionen
-        max-width: 560px; // Maximale Breite begrenzt
+        width: 45%; 
+        max-width: 800px; 
+        height: 720px;
+        margin-bottom: 40%;
+
+        .profil{
+            margin-top: 40%;
+            width: 720px;
+            height: auto;
+        }
+        .cover-image{
+            width: 720px;
+            height: 720px;
+            top: 30%;
+            right: 25%;
+        }
     }
 
     .about-me-header {
@@ -217,7 +231,7 @@
         }
 
         span {
-            font-size: 20px;
+            font-size: 32px;
         }
     }
 }

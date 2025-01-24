@@ -1,4 +1,4 @@
- @include desktop {
+@include desktop {
     .contact-container {
         gap: 60px;
     }
@@ -52,5 +52,67 @@
         >span{
             font-size: 16px;
         }
+    }
+}
+
+
+@media screen and (min-width: 2560px){
+    .info-section{
+        >span{
+            font-size: 32px;
+        }
+    }
+
+    .contact-form{
+        .form-group{
+            input{
+                font-size: 32px;
+            }
+            label{
+                font-size: 32px;
+            }
+            textarea{
+                font-size: 32px;
+            }
+            .checkbox{
+             >label{
+                font-size: 32px;
+             }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .contact-form {
+        .form-group {
+            &.checkbox {
+                >input{
+                    width: 50px;
+                    height: 50px;
+                }
+                label {
+                    font-size: 32px;
+
+                    a {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        button {
+            font-size: 32px;
+            padding: 24px 48px;
+        }
+    }
+
+    .info-section{
+     .highlight-text{
+        font-size: 32px;
+     }
+     .link-style{
+        font-size: 32px;
+     }
     }
 }

@@ -237,3 +237,22 @@
         }
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .skill-set-content{
+       
+            >h3{
+                font-size: 48px;
+            }
+        
+    }
+
+.right{
+    .skill-item{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+}
