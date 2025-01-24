@@ -198,30 +198,6 @@ section{
     }
 }
 
-@media screen and (min-width: 2560px) {
-    section {
-        font-size: 32px;
-    }
 
-    .header-link {
-        font-size: 32px;
-
-        &::after {
-            font-size: 40px;
-        }
-    }
-
-    .language-switcher {
-        .switch-container {
-            width: 120px;
-            height: 54px;
-        }
-
-        .switch-option {
-            font-size: 32px;
-            line-height: 46px;
-        }
-    }
-}
 
 @import '../header/header.responsive.scss';

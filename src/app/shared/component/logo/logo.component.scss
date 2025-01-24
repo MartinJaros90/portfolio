@@ -26,11 +26,11 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
 
-    &:hover {
-        transform: rotate(0deg) scale(1.1);
-        background-color: rgba(61, 207, 182, 0.3);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+    // &:hover {
+    //     transform: rotate(0deg) scale(1.1);
+    //     background-color: rgba(61, 207, 182, 0.3);
+    //     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    // }
 
     &::before,
     &::after {
@@ -54,10 +54,10 @@
         transition: all 0.3s ease;
         cursor: default;
         
-        &:hover {
-            color: $primary-color-light;
-            transform: translateX(5px);
-        }
+        // &:hover {
+        //     color: $primary-color-light;
+        //     transform: translateX(5px);
+        // }
     }
 }
 

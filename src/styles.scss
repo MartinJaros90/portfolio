@@ -19,7 +19,7 @@
 
 html {
     font-family: 'Fira Code';
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -75,7 +75,7 @@ a {
 }
 
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2880px) {
     html {
         font-size: 32px;
     }
