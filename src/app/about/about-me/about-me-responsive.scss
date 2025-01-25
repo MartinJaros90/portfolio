@@ -199,6 +199,9 @@
 }
 
 @media screen and (min-width: 2880px) {
+    section {
+        height: 60vh;
+    }
     .content-wrapper {
         gap: 120px; 
     }
@@ -207,8 +210,8 @@
     .about-me-content {
         width: 45%; 
         max-width: 800px; 
-        height: 720px;
-        margin-bottom: 40%;
+        height: auto;
+        margin-bottom: 15%;
 
         .profil{
             margin-top: 40%;
