@@ -79,24 +79,6 @@ section {
             color: $primary-color-light;
             cursor: pointer;
         }
-
-        &--coming-soon {
-            color: $text-color;
-            opacity: 0.7;
-            cursor: default;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            &:hover {
-                color: $text-color;
-                cursor: default;
-            }
-
-            &:hover::before {
-                opacity: 0;
-            }
-        }
     }
 
     .coming-soon-badge {

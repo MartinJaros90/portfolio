@@ -199,6 +199,10 @@
 }
 
 @media screen and (min-width: 2880px) {
+    section {
+        height: 80vh; 
+    }
+
     .content-wrapper {
         align-items: center;
         gap: 120px;
